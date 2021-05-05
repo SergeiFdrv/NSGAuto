@@ -141,6 +141,16 @@ namespace NSGAuto.Метаданные.Автосервис
             //    // побитовое "и не"
             //}
         }
+
+        private void nsgButton1_Click(object sender, EventArgs e)
+        {
+            Populate();
+        }
+
+        private void nsgButton2_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
     }
     
 

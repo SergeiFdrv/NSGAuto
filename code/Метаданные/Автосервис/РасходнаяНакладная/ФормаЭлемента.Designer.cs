@@ -72,6 +72,8 @@ namespace NSGAuto.Метаданные.Автосервис
             this.СостояниеДокумента = new NSGAuto.Метаданные.Сервис.СостоянияОбъекта.ColumnDescriptor();
             this.Контрагент = new NSGAuto.Метаданные.Автосервис.Контрагент.ColumnDescriptor();
             this.Таблица = new NSGAuto.Метаданные._SystemTables.АвтосервисРасходнаяНакладнаяТаблица.ColumnDescriptor();
+            this.nsgButton1 = new NsgSoft.Design.NsgButton();
+            this.nsgButton2 = new NsgSoft.Design.NsgButton();
             ((System.ComponentModel.ISupportInitialize)(this.nsgEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgToolStrip2)).BeginInit();
@@ -95,6 +97,8 @@ namespace NSGAuto.Метаданные.Автосервис
             ((System.ComponentModel.ISupportInitialize)(this.nsgInput3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgInput2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgInput1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nsgButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nsgButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // nsgEdit
@@ -939,6 +943,34 @@ namespace NSGAuto.Метаданные.Автосервис
             this.Таблица.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             this.Таблица.Visible = false;
             // 
+            // nsgButton1
+            // 
+            this.nsgButton1.ActiveBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.nsgButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.nsgButton1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.nsgButton1.Location = new System.Drawing.Point(572, 9);
+            this.nsgButton1.Name = "NsgButton";
+            this.nsgButton1.Size = new System.Drawing.Size(140, 33);
+            this.nsgButton1.StatesCollection = new NsgSoft.Design.NsgButton.StateCollectionElemnt[0];
+            this.nsgButton1.TabIndex = 27;
+            this.nsgButton1.Text = "Сгенерировать много";
+            this.nsgButton1.TextPosition = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nsgButton1.Click += new System.EventHandler(this.nsgButton1_Click);
+            // 
+            // nsgButton2
+            // 
+            this.nsgButton2.ActiveBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.nsgButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.nsgButton2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.nsgButton2.Location = new System.Drawing.Point(572, 52);
+            this.nsgButton2.Name = "NsgButton";
+            this.nsgButton2.Size = new System.Drawing.Size(140, 33);
+            this.nsgButton2.StatesCollection = new NsgSoft.Design.NsgButton.StateCollectionElemnt[0];
+            this.nsgButton2.TabIndex = 28;
+            this.nsgButton2.Text = "Очистить";
+            this.nsgButton2.TextPosition = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nsgButton2.Click += new System.EventHandler(this.nsgButton2_Click);
+            // 
             // РасходнаяНакладнаяФормаЭлемента
             // 
             this.AllowDrop = true;
@@ -948,6 +980,8 @@ namespace NSGAuto.Метаданные.Автосервис
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(741, 410);
+            this.Controls.Add(this.nsgButton2);
+            this.Controls.Add(this.nsgButton1);
             this.Controls.Add(this.NsgIGrid);
             this.Controls.Add(this.nsgLabel1);
             this.Controls.Add(this.nsgInput4);
@@ -977,6 +1011,8 @@ namespace NSGAuto.Метаданные.Автосервис
             this.Controls.SetChildIndex(this.nsgInput4, 0);
             this.Controls.SetChildIndex(this.nsgLabel1, 0);
             this.Controls.SetChildIndex(this.NsgIGrid, 0);
+            this.Controls.SetChildIndex(this.nsgButton1, 0);
+            this.Controls.SetChildIndex(this.nsgButton2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.nsgEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgToolStrip2)).EndInit();
@@ -1002,6 +1038,8 @@ namespace NSGAuto.Метаданные.Автосервис
             ((System.ComponentModel.ISupportInitialize)(this.nsgInput3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgInput2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgInput1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nsgButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nsgButton2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1039,5 +1077,7 @@ namespace NSGAuto.Метаданные.Автосервис
         private NsgColumnDescriptor.Decimal Сумма;
         protected NsgColumnDescriptor.Decimal Количество;
         private NsgVisualMultipleObject vmoТаблица;
+        protected NsgSoft.Design.NsgButton nsgButton1;
+        protected NsgSoft.Design.NsgButton nsgButton2;
     }
 }
