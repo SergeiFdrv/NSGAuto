@@ -388,7 +388,6 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn1.ChangedProperties = new string[] {
         "Visible"};
             nsgIGridColumn1.DateFormat = null;
-            nsgIGridColumn1.ImportedFromVMO = false;
             nsgIGridColumn1.InitiateRowEdit = true;
             nsgIGridColumn1.Name = "Владелец";
             nsgIGridColumn1.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
@@ -405,7 +404,6 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn2.ChangedProperties = new string[] {
         "Visible"};
             nsgIGridColumn2.DateFormat = null;
-            nsgIGridColumn2.ImportedFromVMO = false;
             nsgIGridColumn2.InitiateRowEdit = true;
             nsgIGridColumn2.Name = "Номенклатура";
             nsgIGridColumn2.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
@@ -421,7 +419,6 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn3.ChangedProperties = new string[] {
         "Visible"};
             nsgIGridColumn3.DateFormat = null;
-            nsgIGridColumn3.ImportedFromVMO = false;
             nsgIGridColumn3.InitiateRowEdit = true;
             nsgIGridColumn3.Name = "Количество";
             nsgIGridColumn3.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
@@ -437,7 +434,6 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn4.ChangedProperties = new string[] {
         "Visible"};
             nsgIGridColumn4.DateFormat = null;
-            nsgIGridColumn4.ImportedFromVMO = false;
             nsgIGridColumn4.InitiateRowEdit = true;
             nsgIGridColumn4.Name = "Сумма";
             nsgIGridColumn4.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));

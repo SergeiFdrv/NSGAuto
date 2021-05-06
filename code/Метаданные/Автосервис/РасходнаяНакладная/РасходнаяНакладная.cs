@@ -24,16 +24,29 @@ namespace NSGAuto.Метаданные.Автосервис
         protected override bool Handling()
         {
             // return base.Handling(); // Вызовет ошибку
-            var рег = Взаиморасчеты.Новый(this);
-            рег.New();
+            var вз = Взаиморасчеты.Новый(this);
             // {
-            рег.Контрагент = Контрагент;
-            рег.Сумма = СуммаИтого;
-            рег.ВидДвижения = Сервис.ВидыДвижений.Приход;
-            рег.AddMovement();
+            вз.New();
+            вз.Контрагент = Контрагент;
+            вз.Сумма = СуммаИтого;
+            вз.ВидДвижения = Сервис.ВидыДвижений.Приход;
+            вз.AddMovement();
             // }
-            рег.Post();
+            вз.Post();
 
+            var table = Таблица.FindAll(new NsgCompare().Add(
+                _SystemTables.АвтосервисРасходнаяНакладнаяТаблица.Names.Владелец, this, NsgComparison.Equal));
+            var ост = Остатки.Новый(this);
+            foreach (var i in table)
+            {
+                ост.New();
+                ост.Номенклатура = i[Остатки.Names.Номенклатура].ToReferent() as Номенклатура;
+                ост.Количество = i[Остатки.Names.Количество].ToDecimal();
+                ост.Сумма = i[Остатки.Names.Сумма].ToDecimal();
+                ост.ВидДвижения = Сервис.ВидыДвижений.Приход;
+                ост.AddMovement();
+                ост.Post();
+            }
             return true;
         }
 
