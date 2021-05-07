@@ -45,7 +45,7 @@ namespace NSGAuto.Метаданные.Автосервис
         void Populate()
         {
             Random random = new Random();
-            const int howMany = 100;
+            const int howMany = 10;
             РасходнаяНакладная рн = РасходнаяНакладная.Новый();
             var контрагенты = Автосервис.Контрагент.Новый().GetAll();
             var номенклатуры = Автосервис.Номенклатура.Новый().GetAll();
@@ -58,12 +58,21 @@ namespace NSGAuto.Метаданные.Автосервис
                 рн.New();
                 рн.Контрагент = контрагенты[random.Next(контрагенты.Count)] as Контрагент;
                 рн.ДатаДокумента = RandomDayFunc();
+
                 строка = рн.Таблица.NewRow();
-                строка.Номенклатура = номенклатуры[random.Next(номенклатуры.Count)] as Номенклатура;
+                строка.Номенклатура = номенклатуры.Find(н => (н as Номенклатура).Наименование == "Автозапчасть") as Номенклатура;
                 строка.Количество = 5;
-                строка.Цена = строка.Номенклатура.Цена;
+                строка.Цена = строка.Номенклатура.Цена + строка.Номенклатура.Цена / 2;
                 строка.Сумма = строка.Количество * строка.Цена;
                 строка.Post();
+
+                строка = рн.Таблица.NewRow();
+                строка.Номенклатура = номенклатуры.Find(н => (н as Номенклатура).Наименование == "Ключ на 22") as Номенклатура;
+                строка.Количество = 5;
+                строка.Цена = строка.Номенклатура.Цена + строка.Номенклатура.Цена / 2;
+                строка.Сумма = строка.Количество * строка.Цена;
+                строка.Post();
+
                 рн.Post();
                 рн.Handle(); // Провести накладную
             }
@@ -98,13 +107,13 @@ namespace NSGAuto.Метаданные.Автосервис
             {
                 Сумма.Value = Цена.Value * Количество.Value;
             }
-            if (e.ColumnName == Сумма.Name)
-            {
-                if (Цена.Value != 0)
-                {
-                    Количество.Value = Сумма.Value / Цена.Value;
-                }
-            }
+            //if (e.ColumnName == Сумма.Name)
+            //{
+            //    if (Количество.Value != 0)
+            //    {
+            //        Цена.Value = Сумма.Value / Количество.Value;
+            //    }
+            //}
             if (e.ColumnName == Количество.Name)
             {
                 Сумма.Value = Цена.Value * Количество.Value;
@@ -123,14 +132,18 @@ namespace NSGAuto.Метаданные.Автосервис
 
         private void NsgIGrid_CellRequestEdit(object sender, NsgIGrid.NsgIGridCellEventArgs e)
         {
-            if (e.ColumnName == Цена.Name || e.ColumnName == Сумма.Name && Цена.Value == 0)
+            if (e.ColumnName == Сумма.Name)
             {
                 e.Cancel = true;
-            //    if (e.RowObject[_SystemTables.АвтосервисРасходнаяНакладнаяТаблица.Names.Сумма].ToFloat() > 500)
-            //    {
-            //        e.Cancel = true;
-            //    }
             }
+            //if (e.ColumnName == Сумма.Name && Цена.Value == 0)
+            //{
+            //    e.Cancel = true;
+            ////    if (e.RowObject[_SystemTables.АвтосервисРасходнаяНакладнаяТаблица.Names.Сумма].ToFloat() > 500)
+            ////    {
+            ////        e.Cancel = true;
+            ////    }
+            //}
         }
 
         private void NsgIGrid_GetAvailableTools(object sender, ref NsgSoft.Common.NsgWorkPanelTools tools)
