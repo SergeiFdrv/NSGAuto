@@ -34,12 +34,12 @@ namespace NSGAuto.Метаданные.Автосервис
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ДолгиФорма));
-            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn1 = new NsgSoft.Forms.NsgIGridColumn();
-            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn2 = new NsgSoft.Forms.NsgIGridColumn();
-            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn3 = new NsgSoft.Forms.NsgIGridColumn();
-            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn4 = new NsgSoft.Forms.NsgIGridColumn();
-            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn5 = new NsgSoft.Forms.NsgIGridColumn();
-            NsgSoft.Forms.NsgGridColumn nsgGridColumn1 = new NsgSoft.Forms.NsgGridColumn();
+            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn6 = new NsgSoft.Forms.NsgIGridColumn();
+            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn7 = new NsgSoft.Forms.NsgIGridColumn();
+            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn8 = new NsgSoft.Forms.NsgIGridColumn();
+            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn9 = new NsgSoft.Forms.NsgIGridColumn();
+            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn10 = new NsgSoft.Forms.NsgIGridColumn();
+            NsgSoft.Forms.NsgGridColumn nsgGridColumn2 = new NsgSoft.Forms.NsgGridColumn();
             this.nsgIGrid1 = new NsgSoft.Forms.NsgIGrid();
             this.vmoИтоги = new NsgSoft.Forms.NsgVisualMultipleObject(this.components);
             this.vmoИтоги_Контрагент = new NSGAuto.Метаданные.Автосервис.Контрагент.ColumnDescriptor();
@@ -162,81 +162,81 @@ namespace NSGAuto.Метаданные.Автосервис
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nsgIGrid1.AutoResizeCols = true;
-            nsgIGridColumn1.AllowFilter = true;
-            nsgIGridColumn1.AllowGroupSelect = false;
-            nsgIGridColumn1.AllowResize = true;
-            nsgIGridColumn1.AutoResize = true;
-            nsgIGridColumn1.Caption = "";
-            nsgIGridColumn1.ChangedProperties = new string[] {
+            nsgIGridColumn6.AllowFilter = true;
+            nsgIGridColumn6.AllowGroupSelect = false;
+            nsgIGridColumn6.AllowResize = true;
+            nsgIGridColumn6.AutoResize = true;
+            nsgIGridColumn6.Caption = "";
+            nsgIGridColumn6.ChangedProperties = new string[] {
         "Visible"};
-            nsgIGridColumn1.DateFormat = null;
-            nsgIGridColumn1.Name = "Контрагент";
-            nsgIGridColumn1.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
-            nsgIGridColumn1.Root = this.nsgIGrid1.Columns.Collection;
-            nsgIGridColumn1.SortDirection = NsgSoft.Database.NsgSortDirection.None;
-            nsgIGridColumn1.UseAsHeaderImage = false;
-            nsgIGridColumn1.Width = 100;
-            nsgIGridColumn2.AllowFilter = true;
-            nsgIGridColumn2.AllowGroupSelect = false;
-            nsgIGridColumn2.AllowResize = true;
-            nsgIGridColumn2.AutoResize = true;
-            nsgIGridColumn2.Caption = "";
-            nsgIGridColumn2.ChangedProperties = new string[] {
+            nsgIGridColumn6.DateFormat = null;
+            nsgIGridColumn6.Name = "Контрагент";
+            nsgIGridColumn6.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
+            nsgIGridColumn6.Root = this.nsgIGrid1.Columns.Collection;
+            nsgIGridColumn6.SortDirection = NsgSoft.Database.NsgSortDirection.None;
+            nsgIGridColumn6.UseAsHeaderImage = false;
+            nsgIGridColumn6.Width = 100;
+            nsgIGridColumn7.AllowFilter = true;
+            nsgIGridColumn7.AllowGroupSelect = false;
+            nsgIGridColumn7.AllowResize = true;
+            nsgIGridColumn7.AutoResize = true;
+            nsgIGridColumn7.Caption = "";
+            nsgIGridColumn7.ChangedProperties = new string[] {
         "Visible"};
-            nsgIGridColumn2.DateFormat = null;
-            nsgIGridColumn2.Name = "НачОстаток";
-            nsgIGridColumn2.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
-            nsgIGridColumn2.Root = this.nsgIGrid1.Columns.Collection;
-            nsgIGridColumn2.SortDirection = NsgSoft.Database.NsgSortDirection.None;
-            nsgIGridColumn2.UseAsHeaderImage = false;
-            nsgIGridColumn2.Width = 100;
-            nsgIGridColumn3.AllowFilter = true;
-            nsgIGridColumn3.AllowGroupSelect = false;
-            nsgIGridColumn3.AllowResize = true;
-            nsgIGridColumn3.AutoResize = true;
-            nsgIGridColumn3.Caption = "";
-            nsgIGridColumn3.ChangedProperties = new string[] {
+            nsgIGridColumn7.DateFormat = null;
+            nsgIGridColumn7.Name = "НачОстаток";
+            nsgIGridColumn7.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
+            nsgIGridColumn7.Root = this.nsgIGrid1.Columns.Collection;
+            nsgIGridColumn7.SortDirection = NsgSoft.Database.NsgSortDirection.None;
+            nsgIGridColumn7.UseAsHeaderImage = false;
+            nsgIGridColumn7.Width = 100;
+            nsgIGridColumn8.AllowFilter = true;
+            nsgIGridColumn8.AllowGroupSelect = false;
+            nsgIGridColumn8.AllowResize = true;
+            nsgIGridColumn8.AutoResize = true;
+            nsgIGridColumn8.Caption = "";
+            nsgIGridColumn8.ChangedProperties = new string[] {
         "Visible"};
-            nsgIGridColumn3.DateFormat = null;
-            nsgIGridColumn3.Name = "Приход";
-            nsgIGridColumn3.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
-            nsgIGridColumn3.Root = this.nsgIGrid1.Columns.Collection;
-            nsgIGridColumn3.SortDirection = NsgSoft.Database.NsgSortDirection.None;
-            nsgIGridColumn3.UseAsHeaderImage = false;
-            nsgIGridColumn3.Width = 100;
-            nsgIGridColumn4.AllowFilter = true;
-            nsgIGridColumn4.AllowGroupSelect = false;
-            nsgIGridColumn4.AllowResize = true;
-            nsgIGridColumn4.AutoResize = true;
-            nsgIGridColumn4.Caption = "";
-            nsgIGridColumn4.ChangedProperties = new string[] {
+            nsgIGridColumn8.DateFormat = null;
+            nsgIGridColumn8.Name = "Приход";
+            nsgIGridColumn8.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
+            nsgIGridColumn8.Root = this.nsgIGrid1.Columns.Collection;
+            nsgIGridColumn8.SortDirection = NsgSoft.Database.NsgSortDirection.None;
+            nsgIGridColumn8.UseAsHeaderImage = false;
+            nsgIGridColumn8.Width = 100;
+            nsgIGridColumn9.AllowFilter = true;
+            nsgIGridColumn9.AllowGroupSelect = false;
+            nsgIGridColumn9.AllowResize = true;
+            nsgIGridColumn9.AutoResize = true;
+            nsgIGridColumn9.Caption = "";
+            nsgIGridColumn9.ChangedProperties = new string[] {
         "Visible"};
-            nsgIGridColumn4.DateFormat = null;
-            nsgIGridColumn4.Name = "Расход";
-            nsgIGridColumn4.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
-            nsgIGridColumn4.Root = this.nsgIGrid1.Columns.Collection;
-            nsgIGridColumn4.SortDirection = NsgSoft.Database.NsgSortDirection.None;
-            nsgIGridColumn4.UseAsHeaderImage = false;
-            nsgIGridColumn4.Width = 100;
-            nsgIGridColumn5.AllowFilter = true;
-            nsgIGridColumn5.AllowGroupSelect = false;
-            nsgIGridColumn5.AllowResize = true;
-            nsgIGridColumn5.AutoResize = true;
-            nsgIGridColumn5.Caption = "";
-            nsgIGridColumn5.ChangedProperties = new string[] {
+            nsgIGridColumn9.DateFormat = null;
+            nsgIGridColumn9.Name = "Расход";
+            nsgIGridColumn9.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
+            nsgIGridColumn9.Root = this.nsgIGrid1.Columns.Collection;
+            nsgIGridColumn9.SortDirection = NsgSoft.Database.NsgSortDirection.None;
+            nsgIGridColumn9.UseAsHeaderImage = false;
+            nsgIGridColumn9.Width = 100;
+            nsgIGridColumn10.AllowFilter = true;
+            nsgIGridColumn10.AllowGroupSelect = false;
+            nsgIGridColumn10.AllowResize = true;
+            nsgIGridColumn10.AutoResize = true;
+            nsgIGridColumn10.Caption = "";
+            nsgIGridColumn10.ChangedProperties = new string[] {
         "Visible"};
-            nsgIGridColumn5.DateFormat = null;
-            nsgIGridColumn5.Name = "КонОстаток";
-            nsgIGridColumn5.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
-            nsgIGridColumn5.Root = this.nsgIGrid1.Columns.Collection;
-            nsgIGridColumn5.SortDirection = NsgSoft.Database.NsgSortDirection.None;
-            nsgIGridColumn5.UseAsHeaderImage = false;
-            nsgIGridColumn5.Width = 100;
-            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn1);
-            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn2);
-            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn3);
-            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn4);
-            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn5);
+            nsgIGridColumn10.DateFormat = null;
+            nsgIGridColumn10.Name = "КонОстаток";
+            nsgIGridColumn10.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
+            nsgIGridColumn10.Root = this.nsgIGrid1.Columns.Collection;
+            nsgIGridColumn10.SortDirection = NsgSoft.Database.NsgSortDirection.None;
+            nsgIGridColumn10.UseAsHeaderImage = false;
+            nsgIGridColumn10.Width = 100;
+            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn6);
+            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn7);
+            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn8);
+            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn9);
+            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn10);
             this.nsgIGrid1.Filter = false;
             this.nsgIGrid1.FrozenColumns = 0;
             this.nsgIGrid1.Grouping = true;
@@ -339,13 +339,13 @@ namespace NSGAuto.Метаданные.Автосервис
             | System.Windows.Forms.AnchorStyles.Left)));
             this.nsgObjectFilter1.AutoSetCompare = true;
             this.nsgObjectFilter1.BackColor = System.Drawing.SystemColors.Control;
-            nsgGridColumn1.Caption = "";
-            nsgGridColumn1.ChangedProperties = new string[] {
+            nsgGridColumn2.Caption = "";
+            nsgGridColumn2.ChangedProperties = new string[] {
         "Visible"};
-            nsgGridColumn1.ImportedFromVMO = false;
-            nsgGridColumn1.Name = "Контрагент";
-            nsgGridColumn1.Root = this.nsgObjectFilter1.Columns.Collection;
-            this.nsgObjectFilter1.Columns.Collection.Add(nsgGridColumn1);
+            nsgGridColumn2.ImportedFromVMO = false;
+            nsgGridColumn2.Name = "Контрагент";
+            nsgGridColumn2.Root = this.nsgObjectFilter1.Columns.Collection;
+            this.nsgObjectFilter1.Columns.Collection.Add(nsgGridColumn2);
             this.nsgObjectFilter1.FilterTypeCaption = "Тип Фильтра";
             this.nsgObjectFilter1.Grouping = false;
             this.nsgObjectFilter1.IsModify = true;
@@ -454,7 +454,7 @@ namespace NSGAuto.Метаданные.Автосервис
             this.nsgReport1.ReportAlias = "Отчет";
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource1);
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource2);
-            this.nsgReport1.ReportGuid = "dd0fdb8843994501be607dcfc613e374";
+            this.nsgReport1.ReportGuid = "c8b573b72bba4f018fc5408fd323df11";
             this.nsgReport1.ReportLoaded = true;
             this.nsgReport1.ReportName = "Отчет";
             this.nsgReport1.ReportSource = resources.GetString("nsgReport1.ReportSource");
@@ -642,10 +642,10 @@ namespace NSGAuto.Метаданные.Автосервис
         private NsgSoft.ReportBuilder.NsgGroupsList nsgGroupsList1;
         protected Контрагент.ColumnDescriptor vmoФильтр_Контрагент;
         protected NsgSoft.ReportBuilder.NsgReportDataSource nsgReportDataSource1;
-        protected NsgSoft.ReportBuilder.NsgReportDataSource ДокDataSource;
         private NsgIGrid nsgIGrid1;
         private NsgVisualMultipleObject vmoИтоги;
         private NsgVisualMultipleObject vmoДок;
         private NsgVisualMultipleObject vmoФильтр;
+        private NsgSoft.ReportBuilder.NsgReportDataSource ДокDataSource;
     }
 }

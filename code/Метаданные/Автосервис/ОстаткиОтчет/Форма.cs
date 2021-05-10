@@ -72,6 +72,10 @@ namespace NSGAuto.Метаданные.Автосервис
                 mtRow[Приход_vmoИтоги].Value = tableRow[Остатки.Names.Сумма].ToCredit();
                 mtRow[Расход_vmoИтоги].Value = tableRow[Остатки.Names.Сумма].ToDebit();
                 mtRow[КонОстаток_vmoИтоги].Value = tableRow[Остатки.Names.Сумма].ToEnd();
+                mtRow[НачОстатокКоличество_vmoИтоги].Value = tableRow[Остатки.Names.Количество].ToBegin();
+                mtRow[ПриходКоличество_vmoИтоги].Value = tableRow[Остатки.Names.Количество].ToCredit();
+                mtRow[РасходКоличество_vmoИтоги].Value = tableRow[Остатки.Names.Количество].ToDebit();
+                mtRow[КонОстатокКоличество_vmoИтоги].Value = tableRow[Остатки.Names.Количество].ToEnd();
                 mtRow.Post();
             }
             vmoИтоги.Data.UpdateDataAsync(this); // разблокирует отображение изменений
@@ -85,6 +89,8 @@ namespace NSGAuto.Метаданные.Автосервис
                 NsgSoft.Common.NsgRegisterResult.Credit | NsgSoft.Common.NsgRegisterResult.Debit,
                 Остатки.Names.Номенклатура, Остатки.Names.Владелец);
             vmoДок.Data.MemoryTable.Clear();
+            Период_vmoЗаголовок.Value = nsgPeriodPicker1.Period.Value.ToString(); // WTF: пустая строка
+            Фильтр_vmoЗаголовок.Value = cmp.ToString();
             foreach (var tableRow in table.Rows)
             {
                 var mtRow = vmoДок.Data.MemoryTable.NewRow();
@@ -92,6 +98,8 @@ namespace NSGAuto.Метаданные.Автосервис
                 mtRow[Документ_vmoДок].Value = tableRow[Остатки.Names.Владелец].ToReferent();
                 mtRow[Приход_vmoДок].Value = tableRow[Остатки.Names.Сумма].ToCredit();
                 mtRow[Расход_vmoДок].Value = tableRow[Остатки.Names.Сумма].ToDebit();
+                mtRow[ПриходКоличество_vmoДок].Value = tableRow[Остатки.Names.Количество].ToCredit();
+                mtRow[РасходКоличество_vmoДок].Value = tableRow[Остатки.Names.Количество].ToDebit();
                 mtRow.Post();
             }
         }

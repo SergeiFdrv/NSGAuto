@@ -41,44 +41,58 @@ namespace NSGAuto.Метаданные.Автосервис
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn4 = new NsgSoft.Forms.NsgIGridColumn();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn5 = new NsgSoft.Forms.NsgIGridColumn();
             this.nsgObjectFilter1 = new NsgSoft.Forms.NsgIGridView.NsgObjectFilter();
+            this.vmoФильтр = new NsgSoft.Forms.NsgVisualMultipleObject(this.components);
+            this.Номенклатура_vmoФильтр = new NSGAuto.Метаданные.Автосервис.Номенклатура.ColumnDescriptor();
             this.nsgIGrid1 = new NsgSoft.Forms.NsgIGrid();
             this.vmoИтоги = new NsgSoft.Forms.NsgVisualMultipleObject(this.components);
-            this.nsgGroupsList1 = new NsgSoft.ReportBuilder.NsgGroupsList();
-            this.nsgPeriodPicker1 = new NsgSoft.Forms.NsgPeriodPicker();
-            this.nsgLabel2 = new NsgSoft.Forms.NsgLabel();
-            this.nsgButton1 = new NsgSoft.Design.NsgButton();
-            this.nsgReportDataSource1 = new NsgSoft.ReportBuilder.NsgReportDataSource(this.components);
-            this.nsgReport1 = new NsgSoft.ReportBuilder.NsgReport(this.components);
-            this.stiReportDataSource1 = new NsgSoft.ReportBuilder.Design.StiReportDataSource("nsgReportDataSource1", this.nsgReportDataSource1);
-            this.ДокDataSource = new NsgSoft.ReportBuilder.NsgReportDataSource(this.components);
-            this.vmoДок = new NsgSoft.Forms.NsgVisualMultipleObject(this.components);
-            this.stiReportDataSource2 = new NsgSoft.ReportBuilder.Design.StiReportDataSource("ДокDataSource", this.ДокDataSource);
-            this.vmoФильтр = new NsgSoft.Forms.NsgVisualMultipleObject(this.components);
             this.Номенклатура_vmoИтоги = new NSGAuto.Метаданные.Автосервис.Номенклатура.ColumnDescriptor();
             this.НачОстаток_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
             this.Приход_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
             this.Расход_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
             this.КонОстаток_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.НачОстатокКоличество_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.ПриходКоличество_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.РасходКоличество_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.КонОстатокКоличество_vmoИтоги = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.nsgGroupsList1 = new NsgSoft.ReportBuilder.NsgGroupsList();
+            this.nsgReport1 = new NsgSoft.ReportBuilder.NsgReport(this.components);
+            this.nsgReportDataSource1 = new NsgSoft.ReportBuilder.NsgReportDataSource(this.components);
+            this.stiReportDataSource1 = new NsgSoft.ReportBuilder.Design.StiReportDataSource("nsgReportDataSource1", this.nsgReportDataSource1);
+            this.ДокDataSource = new NsgSoft.ReportBuilder.NsgReportDataSource(this.components);
+            this.vmoДок = new NsgSoft.Forms.NsgVisualMultipleObject(this.components);
             this.Номенклатура_vmoДок = new NSGAuto.Метаданные.Автосервис.Номенклатура.ColumnDescriptor();
             this.Приход_vmoДок = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
             this.Расход_vmoДок = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
             this.Документ_vmoДок = new NsgSoft.Forms.NsgColumnDescriptor.UntypedMultipleObject();
+            this.ПриходКоличество_vmoДок = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.РасходКоличество_vmoДок = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.stiReportDataSource2 = new NsgSoft.ReportBuilder.Design.StiReportDataSource("ДокDataSource", this.ДокDataSource);
+            this.ЗаголовокDataSource = new NsgSoft.ReportBuilder.NsgReportDataSource(this.components);
+            this.vmoЗаголовок = new NsgSoft.Forms.NsgVisualMultipleObject(this.components);
+            this.Период_vmoЗаголовок = new NsgSoft.Forms.NsgColumnDescriptor.String();
+            this.Фильтр_vmoЗаголовок = new NsgSoft.Forms.NsgColumnDescriptor.String();
+            this.stiReportDataSource3 = new NsgSoft.ReportBuilder.Design.StiReportDataSource("ЗаголовокDataSource", this.ЗаголовокDataSource);
+            this.nsgPeriodPicker1 = new NsgSoft.Forms.NsgPeriodPicker();
+            this.nsgLabel2 = new NsgSoft.Forms.NsgLabel();
+            this.nsgButton1 = new NsgSoft.Design.NsgButton();
             this.Период = new NsgSoft.Forms.NsgColumnDescriptor();
-            this.Номенклатура_vmoФильтр = new NSGAuto.Метаданные.Автосервис.Номенклатура.ColumnDescriptor();
+            this.ПериодСтрока = new NsgSoft.Forms.NsgColumnDescriptor.String();
             ((System.ComponentModel.ISupportInitialize)(this.btnCreateReport)).BeginInit();
             this.panelButtonReportForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.printButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formSettingsButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgVisualMultipleObject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgObjectFilter1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmoФильтр)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgIGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmoИтоги)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgGroupsList1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nsgButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgReportDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ДокDataSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmoДок)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vmoФильтр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЗаголовокDataSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmoЗаголовок)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nsgButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreateReport
@@ -104,7 +118,7 @@ namespace NSGAuto.Метаданные.Автосервис
             this.panelButtonReportForm.Controls.Add(this.printButton);
             this.panelButtonReportForm.Controls.Add(this.btnCreateReport);
             this.panelButtonReportForm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButtonReportForm.Location = new System.Drawing.Point(0, 382);
+            this.panelButtonReportForm.Location = new System.Drawing.Point(0, 362);
             this.panelButtonReportForm.Name = "panelButtonReportForm";
             this.panelButtonReportForm.Size = new System.Drawing.Size(858, 28);
             this.panelButtonReportForm.TabIndex = 0;
@@ -144,6 +158,7 @@ namespace NSGAuto.Метаданные.Автосервис
             // nsgVisualMultipleObject
             // 
             this.nsgVisualMultipleObject.Columns.Collection.Add(this.Период);
+            this.nsgVisualMultipleObject.Columns.Collection.Add(this.ПериодСтрока);
             this.nsgVisualMultipleObject.IsActive = true;
             this.nsgVisualMultipleObject.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
             this.nsgVisualMultipleObject.MetaDataName = "";
@@ -159,6 +174,7 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgGridColumn1.Caption = "";
             nsgGridColumn1.ChangedProperties = new string[] {
         "Visible"};
+            nsgGridColumn1.ImportedFromVMO = false;
             nsgGridColumn1.Name = "Номенклатура";
             nsgGridColumn1.Root = this.nsgObjectFilter1.Columns.Collection;
             this.nsgObjectFilter1.Columns.Collection.Add(nsgGridColumn1);
@@ -178,6 +194,24 @@ namespace NSGAuto.Метаданные.Автосервис
             this.nsgObjectFilter1.SourceObject = this.vmoФильтр;
             this.nsgObjectFilter1.TabIndex = 17;
             this.nsgObjectFilter1.ValueCaption = "Фильтр";
+            // 
+            // vmoФильтр
+            // 
+            this.vmoФильтр.Columns.Collection.Add(this.Номенклатура_vmoФильтр);
+            this.vmoФильтр.IsActive = true;
+            this.vmoФильтр.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
+            this.vmoФильтр.MetaDataName = "";
+            this.vmoФильтр.FullName = "";
+            // 
+            // Номенклатура_vmoФильтр
+            // 
+            this.Номенклатура_vmoФильтр.Caption = "Номенклатура";
+            this.Номенклатура_vmoФильтр.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.Номенклатура_vmoФильтр.Name = "Номенклатура";
+            this.Номенклатура_vmoФильтр.NSGType = typeof(NSGAuto.Метаданные.Автосервис.Номенклатура);
+            this.Номенклатура_vmoФильтр.PropertyType = typeof(NSGAuto.Метаданные.Автосервис.Номенклатура);
+            this.Номенклатура_vmoФильтр.SearchCondition.OwnerComponent = this.Номенклатура_vmoФильтр;
+            this.Номенклатура_vmoФильтр.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             // 
             // nsgIGrid1
             // 
@@ -312,139 +346,13 @@ namespace NSGAuto.Метаданные.Автосервис
             this.vmoИтоги.Columns.Collection.Add(this.Приход_vmoИтоги);
             this.vmoИтоги.Columns.Collection.Add(this.Расход_vmoИтоги);
             this.vmoИтоги.Columns.Collection.Add(this.КонОстаток_vmoИтоги);
+            this.vmoИтоги.Columns.Collection.Add(this.НачОстатокКоличество_vmoИтоги);
+            this.vmoИтоги.Columns.Collection.Add(this.ПриходКоличество_vmoИтоги);
+            this.vmoИтоги.Columns.Collection.Add(this.РасходКоличество_vmoИтоги);
+            this.vmoИтоги.Columns.Collection.Add(this.КонОстатокКоличество_vmoИтоги);
             this.vmoИтоги.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
             this.vmoИтоги.MetaDataName = "";
             this.vmoИтоги.FullName = "";
-            // 
-            // nsgGroupsList1
-            // 
-            this.nsgGroupsList1.AllowDrop = true;
-            this.nsgGroupsList1.BackColor = System.Drawing.SystemColors.Control;
-            this.nsgGroupsList1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nsgGroupsList1.DisableComponents = ((System.Collections.Generic.List<string>)(resources.GetObject("nsgGroupsList1.DisableComponents")));
-            this.nsgGroupsList1.Location = new System.Drawing.Point(12, 43);
-            this.nsgGroupsList1.MinimumSize = new System.Drawing.Size(290, 150);
-            this.nsgGroupsList1.Name = "NsgGroupsList";
-            this.nsgGroupsList1.NsgRemoveMasterComponent = true;
-            this.nsgGroupsList1.SetReport = this.nsgReport1;
-            this.nsgGroupsList1.SetTitle = "title";
-            this.nsgGroupsList1.Size = new System.Drawing.Size(290, 150);
-            this.nsgGroupsList1.TabIndex = 16;
-            // 
-            // nsgPeriodPicker1
-            // 
-            this.nsgPeriodPicker1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.nsgPeriodPicker1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nsgPeriodPicker1.Location = new System.Drawing.Point(63, 12);
-            this.nsgPeriodPicker1.MinimumSize = new System.Drawing.Size(2, 4);
-            this.nsgPeriodPicker1.Name = "NsgPeriodPicker";
-            this.nsgPeriodPicker1.Size = new System.Drawing.Size(151, 27);
-            this.nsgPeriodPicker1.TabIndex = 20;
-            // 
-            // nsgLabel2
-            // 
-            this.nsgLabel2.AutoSize = true;
-            this.nsgLabel2.ConfigurationName = "";
-            this.nsgLabel2.FullName = "";
-            this.nsgLabel2.IsInitialized = false;
-            this.nsgLabel2.Location = new System.Drawing.Point(12, 21);
-            this.nsgLabel2.MetaDataName = "";
-            this.nsgLabel2.Name = "nsgLabel1";
-            this.nsgLabel2.Requsite = "";
-            this.nsgLabel2.Size = new System.Drawing.Size(45, 13);
-            this.nsgLabel2.TabIndex = 19;
-            this.nsgLabel2.Text = "Период";
-            // 
-            // nsgButton1
-            // 
-            this.nsgButton1.ActiveBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.nsgButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.nsgButton1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.nsgButton1.Location = new System.Drawing.Point(220, 12);
-            this.nsgButton1.Name = "NsgButton";
-            this.nsgButton1.Size = new System.Drawing.Size(82, 25);
-            this.nsgButton1.StatesCollection = new NsgSoft.Design.NsgButton.StateCollectionElemnt[0];
-            this.nsgButton1.TabIndex = 18;
-            this.nsgButton1.Text = "Просмотр";
-            this.nsgButton1.TextPosition = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nsgButton1.AsyncClick += new System.ComponentModel.DoWorkEventHandler(this.nsgButton1_AsyncClick);
-            // 
-            // nsgReportDataSource1
-            // 
-            this.nsgReportDataSource1.MasterComponent = this.vmoИтоги;
-            this.nsgReportDataSource1.Name = "nsgReportDataSource1";
-            // 
-            // nsgReport1
-            // 
-            this.nsgReport1.CurrentProgressValue = 0;
-            this.nsgReport1.HighlightedComponent = null;
-            this.nsgReport1.IsSyncMode = true;
-            this.nsgReport1.MaxProgressValue = 100;
-            this.nsgReport1.OwnerForm = null;
-            this.nsgReport1.ProgressEventType = NsgSoft.DataObjects.NsgThread.ProgressEventsType.Asynchronous;
-            this.nsgReport1.ProgressObject = null;
-            this.nsgReport1.ProgressProcentage = 0;
-            this.nsgReport1.ReferencedAssemblies = new string[] {
-        "System.Dll",
-        "System.Drawing.Dll",
-        "System.Windows.Forms.Dll",
-        "System.Data.Dll",
-        "System.Xml.Dll",
-        "NsgSoft.ReportControls.Dll",
-        "NsgSoft.ReportBase.Dll",
-        "NsgSoft.ReportBuilder.Dll",
-        "NsgSoft.Common.Dll",
-        "NsgSoft.Database.Dll",
-        "NsgSoft.DataObjects.Dll",
-        "NsgSoft.Design.Dll",
-        "NsgSoft.Forms.Dll",
-        "NsgSoft.FormsComponents.dll",
-        "NsgSoft.Tools.dll",
-        "NsgSoft.CityGuide.Dll"};
-            this.nsgReport1.ReportAlias = "Отчет";
-            this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource1);
-            this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource2);
-            this.nsgReport1.ReportGuid = "298df9cf6e7e4deca08dd0ee9397ffe3";
-            this.nsgReport1.ReportLoaded = true;
-            this.nsgReport1.ReportName = "Отчет";
-            this.nsgReport1.ReportSource = resources.GetString("nsgReport1.ReportSource");
-            this.nsgReport1.ReportUnit = NsgSoft.ReportBuilder.StiReportUnitType.Centimeters;
-            this.nsgReport1.ScriptLanguage = NsgSoft.ReportBuilder.StiReportLanguageType.CSharp;
-            this.nsgReport1.ShowBookmarksPanel = false;
-            // 
-            // stiReportDataSource1
-            // 
-            this.stiReportDataSource1.Item = this.nsgReportDataSource1;
-            this.stiReportDataSource1.Name = "nsgReportDataSource1";
-            // 
-            // ДокDataSource
-            // 
-            this.ДокDataSource.MasterComponent = this.vmoДок;
-            this.ДокDataSource.Name = "ДокDataSource";
-            // 
-            // vmoДок
-            // 
-            this.vmoДок.Columns.Collection.Add(this.Номенклатура_vmoДок);
-            this.vmoДок.Columns.Collection.Add(this.Приход_vmoДок);
-            this.vmoДок.Columns.Collection.Add(this.Расход_vmoДок);
-            this.vmoДок.Columns.Collection.Add(this.Документ_vmoДок);
-            this.vmoДок.IsActive = true;
-            this.vmoДок.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
-            this.vmoДок.MetaDataName = "";
-            this.vmoДок.FullName = "";
-            // 
-            // stiReportDataSource2
-            // 
-            this.stiReportDataSource2.Item = this.ДокDataSource;
-            this.stiReportDataSource2.Name = "ДокDataSource";
-            // 
-            // vmoФильтр
-            // 
-            this.vmoФильтр.Columns.Collection.Add(this.Номенклатура_vmoФильтр);
-            this.vmoФильтр.IsActive = true;
-            this.vmoФильтр.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
-            this.vmoФильтр.MetaDataName = "";
-            this.vmoФильтр.FullName = "";
             // 
             // Номенклатура_vmoИтоги
             // 
@@ -500,6 +408,132 @@ namespace NSGAuto.Метаданные.Автосервис
             this.КонОстаток_vmoИтоги.SearchCondition.OwnerComponent = this.КонОстаток_vmoИтоги;
             this.КонОстаток_vmoИтоги.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             // 
+            // НачОстатокКоличество_vmoИтоги
+            // 
+            this.НачОстатокКоличество_vmoИтоги.CalcTotal = false;
+            this.НачОстатокКоличество_vmoИтоги.Caption = "НачОстатокКоличество";
+            this.НачОстатокКоличество_vmoИтоги.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.НачОстатокКоличество_vmoИтоги.Name = "НачОстатокКоличество";
+            this.НачОстатокКоличество_vmoИтоги.NSGType = typeof(NsgSoft.DataObjects.NsgDataFloat);
+            this.НачОстатокКоличество_vmoИтоги.PropertyType = typeof(decimal);
+            this.НачОстатокКоличество_vmoИтоги.SearchCondition.OwnerComponent = this.НачОстатокКоличество_vmoИтоги;
+            this.НачОстатокКоличество_vmoИтоги.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // ПриходКоличество_vmoИтоги
+            // 
+            this.ПриходКоличество_vmoИтоги.CalcTotal = false;
+            this.ПриходКоличество_vmoИтоги.Caption = "ПриходКоличество";
+            this.ПриходКоличество_vmoИтоги.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.ПриходКоличество_vmoИтоги.Name = "ПриходКоличество";
+            this.ПриходКоличество_vmoИтоги.NSGType = typeof(NsgSoft.DataObjects.NsgDataFloat);
+            this.ПриходКоличество_vmoИтоги.PropertyType = typeof(decimal);
+            this.ПриходКоличество_vmoИтоги.SearchCondition.OwnerComponent = this.ПриходКоличество_vmoИтоги;
+            this.ПриходКоличество_vmoИтоги.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // РасходКоличество_vmoИтоги
+            // 
+            this.РасходКоличество_vmoИтоги.CalcTotal = false;
+            this.РасходКоличество_vmoИтоги.Caption = "РасходКоличество";
+            this.РасходКоличество_vmoИтоги.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.РасходКоличество_vmoИтоги.Name = "РасходКоличество";
+            this.РасходКоличество_vmoИтоги.NSGType = typeof(NsgSoft.DataObjects.NsgDataFloat);
+            this.РасходКоличество_vmoИтоги.PropertyType = typeof(decimal);
+            this.РасходКоличество_vmoИтоги.SearchCondition.OwnerComponent = this.РасходКоличество_vmoИтоги;
+            this.РасходКоличество_vmoИтоги.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // КонОстатокКоличество_vmoИтоги
+            // 
+            this.КонОстатокКоличество_vmoИтоги.CalcTotal = false;
+            this.КонОстатокКоличество_vmoИтоги.Caption = "КонОстатокКоличество";
+            this.КонОстатокКоличество_vmoИтоги.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.КонОстатокКоличество_vmoИтоги.Name = "КонОстатокКоличество";
+            this.КонОстатокКоличество_vmoИтоги.NSGType = typeof(NsgSoft.DataObjects.NsgDataFloat);
+            this.КонОстатокКоличество_vmoИтоги.PropertyType = typeof(decimal);
+            this.КонОстатокКоличество_vmoИтоги.SearchCondition.OwnerComponent = this.КонОстатокКоличество_vmoИтоги;
+            this.КонОстатокКоличество_vmoИтоги.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // nsgGroupsList1
+            // 
+            this.nsgGroupsList1.AllowDrop = true;
+            this.nsgGroupsList1.BackColor = System.Drawing.SystemColors.Control;
+            this.nsgGroupsList1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nsgGroupsList1.DisableComponents = ((System.Collections.Generic.List<string>)(resources.GetObject("nsgGroupsList1.DisableComponents")));
+            this.nsgGroupsList1.Location = new System.Drawing.Point(12, 43);
+            this.nsgGroupsList1.MinimumSize = new System.Drawing.Size(290, 150);
+            this.nsgGroupsList1.Name = "NsgGroupsList";
+            this.nsgGroupsList1.NsgRemoveMasterComponent = true;
+            this.nsgGroupsList1.SetReport = this.nsgReport1;
+            this.nsgGroupsList1.SetTitle = "title";
+            this.nsgGroupsList1.Size = new System.Drawing.Size(290, 150);
+            this.nsgGroupsList1.TabIndex = 16;
+            // 
+            // nsgReport1
+            // 
+            this.nsgReport1.CurrentProgressValue = 0;
+            this.nsgReport1.HighlightedComponent = null;
+            this.nsgReport1.IsSyncMode = true;
+            this.nsgReport1.MaxProgressValue = 100;
+            this.nsgReport1.OwnerForm = null;
+            this.nsgReport1.ProgressEventType = NsgSoft.DataObjects.NsgThread.ProgressEventsType.Asynchronous;
+            this.nsgReport1.ProgressObject = null;
+            this.nsgReport1.ProgressProcentage = 0;
+            this.nsgReport1.ReferencedAssemblies = new string[] {
+        "System.Dll",
+        "System.Drawing.Dll",
+        "System.Windows.Forms.Dll",
+        "System.Data.Dll",
+        "System.Xml.Dll",
+        "NsgSoft.ReportControls.Dll",
+        "NsgSoft.ReportBase.Dll",
+        "NsgSoft.ReportBuilder.Dll",
+        "NsgSoft.Common.Dll",
+        "NsgSoft.Database.Dll",
+        "NsgSoft.DataObjects.Dll",
+        "NsgSoft.Design.Dll",
+        "NsgSoft.Forms.Dll",
+        "NsgSoft.FormsComponents.dll",
+        "NsgSoft.Tools.dll",
+        "NsgSoft.CityGuide.Dll"};
+            this.nsgReport1.ReportAlias = "Отчет";
+            this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource1);
+            this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource2);
+            this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource3);
+            this.nsgReport1.ReportGuid = "e5e4f90c7a2d48dca434cc246f25071e";
+            this.nsgReport1.ReportLoaded = true;
+            this.nsgReport1.ReportName = "Отчет";
+            this.nsgReport1.ReportSource = resources.GetString("nsgReport1.ReportSource");
+            this.nsgReport1.ReportUnit = NsgSoft.ReportBuilder.StiReportUnitType.Centimeters;
+            this.nsgReport1.ScriptLanguage = NsgSoft.ReportBuilder.StiReportLanguageType.CSharp;
+            this.nsgReport1.ShowBookmarksPanel = false;
+            // 
+            // nsgReportDataSource1
+            // 
+            this.nsgReportDataSource1.MasterComponent = this.vmoИтоги;
+            this.nsgReportDataSource1.Name = "nsgReportDataSource1";
+            // 
+            // stiReportDataSource1
+            // 
+            this.stiReportDataSource1.Item = this.nsgReportDataSource1;
+            this.stiReportDataSource1.Name = "nsgReportDataSource1";
+            // 
+            // ДокDataSource
+            // 
+            this.ДокDataSource.MasterComponent = this.vmoДок;
+            this.ДокDataSource.Name = "ДокDataSource";
+            // 
+            // vmoДок
+            // 
+            this.vmoДок.Columns.Collection.Add(this.Номенклатура_vmoДок);
+            this.vmoДок.Columns.Collection.Add(this.Приход_vmoДок);
+            this.vmoДок.Columns.Collection.Add(this.Расход_vmoДок);
+            this.vmoДок.Columns.Collection.Add(this.Документ_vmoДок);
+            this.vmoДок.Columns.Collection.Add(this.ПриходКоличество_vmoДок);
+            this.vmoДок.Columns.Collection.Add(this.РасходКоличество_vmoДок);
+            this.vmoДок.IsActive = true;
+            this.vmoДок.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
+            this.vmoДок.MetaDataName = "";
+            this.vmoДок.FullName = "";
+            // 
             // Номенклатура_vmoДок
             // 
             this.Номенклатура_vmoДок.Caption = "Номенклатура";
@@ -543,6 +577,111 @@ namespace NSGAuto.Метаданные.Автосервис
             this.Документ_vmoДок.SearchCondition.OwnerComponent = this.Документ_vmoДок;
             this.Документ_vmoДок.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             // 
+            // ПриходКоличество_vmoДок
+            // 
+            this.ПриходКоличество_vmoДок.CalcTotal = false;
+            this.ПриходКоличество_vmoДок.Caption = "ПриходКоличество";
+            this.ПриходКоличество_vmoДок.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.ПриходКоличество_vmoДок.Name = "ПриходКоличество";
+            this.ПриходКоличество_vmoДок.NSGType = typeof(NsgSoft.DataObjects.NsgDataFloat);
+            this.ПриходКоличество_vmoДок.PropertyType = typeof(decimal);
+            this.ПриходКоличество_vmoДок.SearchCondition.OwnerComponent = this.ПриходКоличество_vmoДок;
+            this.ПриходКоличество_vmoДок.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // РасходКоличество_vmoДок
+            // 
+            this.РасходКоличество_vmoДок.CalcTotal = false;
+            this.РасходКоличество_vmoДок.Caption = "РасходКоличество";
+            this.РасходКоличество_vmoДок.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.РасходКоличество_vmoДок.Name = "РасходКоличество";
+            this.РасходКоличество_vmoДок.NSGType = typeof(NsgSoft.DataObjects.NsgDataFloat);
+            this.РасходКоличество_vmoДок.PropertyType = typeof(decimal);
+            this.РасходКоличество_vmoДок.SearchCondition.OwnerComponent = this.РасходКоличество_vmoДок;
+            this.РасходКоличество_vmoДок.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // stiReportDataSource2
+            // 
+            this.stiReportDataSource2.Item = this.ДокDataSource;
+            this.stiReportDataSource2.Name = "ДокDataSource";
+            // 
+            // ЗаголовокDataSource
+            // 
+            this.ЗаголовокDataSource.MasterComponent = this.vmoЗаголовок;
+            this.ЗаголовокDataSource.Name = "ЗаголовокDataSource";
+            this.ЗаголовокDataSource.Records = NsgSoft.Forms.NsgSourceRows.CurentRow;
+            // 
+            // vmoЗаголовок
+            // 
+            this.vmoЗаголовок.Columns.Collection.Add(this.Период_vmoЗаголовок);
+            this.vmoЗаголовок.Columns.Collection.Add(this.Фильтр_vmoЗаголовок);
+            this.vmoЗаголовок.IsActive = true;
+            this.vmoЗаголовок.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
+            this.vmoЗаголовок.MetaDataName = "";
+            this.vmoЗаголовок.FullName = "";
+            // 
+            // Период_vmoЗаголовок
+            // 
+            this.Период_vmoЗаголовок.Caption = "Период";
+            this.Период_vmoЗаголовок.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.Период_vmoЗаголовок.Name = "Период";
+            this.Период_vmoЗаголовок.NSGType = typeof(NsgSoft.DataObjects.NsgDataString);
+            this.Период_vmoЗаголовок.PropertyType = typeof(string);
+            this.Период_vmoЗаголовок.SearchCondition.OwnerComponent = this.Период_vmoЗаголовок;
+            this.Период_vmoЗаголовок.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // Фильтр_vmoЗаголовок
+            // 
+            this.Фильтр_vmoЗаголовок.Caption = "Фильтр";
+            this.Фильтр_vmoЗаголовок.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.Фильтр_vmoЗаголовок.Name = "Фильтр";
+            this.Фильтр_vmoЗаголовок.NSGType = typeof(NsgSoft.DataObjects.NsgDataString);
+            this.Фильтр_vmoЗаголовок.PropertyType = typeof(string);
+            this.Фильтр_vmoЗаголовок.SearchCondition.OwnerComponent = this.Фильтр_vmoЗаголовок;
+            this.Фильтр_vmoЗаголовок.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // stiReportDataSource3
+            // 
+            this.stiReportDataSource3.Item = this.ЗаголовокDataSource;
+            this.stiReportDataSource3.Name = "ЗаголовокDataSource";
+            // 
+            // nsgPeriodPicker1
+            // 
+            this.nsgPeriodPicker1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.nsgPeriodPicker1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nsgPeriodPicker1.Location = new System.Drawing.Point(63, 12);
+            this.nsgPeriodPicker1.MinimumSize = new System.Drawing.Size(2, 4);
+            this.nsgPeriodPicker1.Name = "NsgPeriodPicker";
+            this.nsgPeriodPicker1.Size = new System.Drawing.Size(151, 27);
+            this.nsgPeriodPicker1.TabIndex = 20;
+            // 
+            // nsgLabel2
+            // 
+            this.nsgLabel2.AutoSize = true;
+            this.nsgLabel2.ConfigurationName = "";
+            this.nsgLabel2.FullName = "";
+            this.nsgLabel2.IsInitialized = false;
+            this.nsgLabel2.Location = new System.Drawing.Point(12, 21);
+            this.nsgLabel2.MetaDataName = "";
+            this.nsgLabel2.Name = "nsgLabel1";
+            this.nsgLabel2.Requsite = "";
+            this.nsgLabel2.Size = new System.Drawing.Size(45, 13);
+            this.nsgLabel2.TabIndex = 19;
+            this.nsgLabel2.Text = "Период";
+            // 
+            // nsgButton1
+            // 
+            this.nsgButton1.ActiveBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.nsgButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.nsgButton1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.nsgButton1.Location = new System.Drawing.Point(220, 12);
+            this.nsgButton1.Name = "NsgButton";
+            this.nsgButton1.Size = new System.Drawing.Size(82, 25);
+            this.nsgButton1.StatesCollection = new NsgSoft.Design.NsgButton.StateCollectionElemnt[0];
+            this.nsgButton1.TabIndex = 18;
+            this.nsgButton1.Text = "Просмотр";
+            this.nsgButton1.TextPosition = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nsgButton1.AsyncClick += new System.ComponentModel.DoWorkEventHandler(this.nsgButton1_AsyncClick);
+            // 
             // Период
             // 
             this.Период.Caption = "Период";
@@ -553,15 +692,15 @@ namespace NSGAuto.Метаданные.Автосервис
             this.Период.SearchCondition.OwnerComponent = this.Период;
             this.Период.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             // 
-            // Номенклатура_vmoФильтр
+            // ПериодСтрока
             // 
-            this.Номенклатура_vmoФильтр.Caption = "Номенклатура";
-            this.Номенклатура_vmoФильтр.Creator = typeof(NsgSoft.Forms.NsgReportForm);
-            this.Номенклатура_vmoФильтр.Name = "Номенклатура";
-            this.Номенклатура_vmoФильтр.NSGType = typeof(NSGAuto.Метаданные.Автосервис.Номенклатура);
-            this.Номенклатура_vmoФильтр.PropertyType = typeof(NSGAuto.Метаданные.Автосервис.Номенклатура);
-            this.Номенклатура_vmoФильтр.SearchCondition.OwnerComponent = this.Номенклатура_vmoФильтр;
-            this.Номенклатура_vmoФильтр.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            this.ПериодСтрока.Caption = "ПериодСтрока";
+            this.ПериодСтрока.Creator = typeof(NsgSoft.Forms.NsgReportForm);
+            this.ПериодСтрока.Name = "ПериодСтрока";
+            this.ПериодСтрока.NSGType = typeof(NsgSoft.DataObjects.NsgDataString);
+            this.ПериодСтрока.PropertyType = typeof(string);
+            this.ПериодСтрока.SearchCondition.OwnerComponent = this.ПериодСтрока;
+            this.ПериодСтрока.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             // 
             // ОстаткиОтчетФорма
             // 
@@ -603,14 +742,16 @@ namespace NSGAuto.Метаданные.Автосервис
             ((System.ComponentModel.ISupportInitialize)(this.formSettingsButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgVisualMultipleObject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgObjectFilter1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmoФильтр)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgIGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmoИтоги)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgGroupsList1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nsgButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nsgReportDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ДокDataSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmoДок)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vmoФильтр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЗаголовокDataSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmoЗаголовок)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nsgButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,24 +764,36 @@ namespace NSGAuto.Метаданные.Автосервис
         protected NsgColumnDescriptor.Decimal Расход_vmoИтоги;
         protected NsgColumnDescriptor.Decimal КонОстаток_vmoИтоги;
         protected NsgSoft.ReportBuilder.NsgGroupsList nsgGroupsList1;
-        protected NsgSoft.Forms.NsgIGridView.NsgObjectFilter nsgObjectFilter1;
         protected NsgPeriodPicker nsgPeriodPicker1;
         protected NsgLabel nsgLabel2;
         protected NsgColumnDescriptor Период;
-        protected NsgSoft.ReportBuilder.NsgReportDataSource ДокDataSource;
         protected NsgSoft.Design.NsgButton nsgButton1;
         protected Номенклатура.ColumnDescriptor Номенклатура_vmoДок;
         protected NsgColumnDescriptor.Decimal Приход_vmoДок;
         protected NsgColumnDescriptor.Decimal Расход_vmoДок;
         protected NsgColumnDescriptor.UntypedMultipleObject Документ_vmoДок;
+        private NsgSoft.ReportBuilder.NsgReport nsgReport1;
+        protected Номенклатура.ColumnDescriptor Номенклатура_vmoФильтр;
+        private NsgSoft.Forms.NsgIGridView.NsgObjectFilter nsgObjectFilter1;
+        protected NsgColumnDescriptor.Decimal НачОстатокКоличество_vmoИтоги;
+        protected NsgColumnDescriptor.Decimal ПриходКоличество_vmoИтоги;
+        protected NsgColumnDescriptor.Decimal РасходКоличество_vmoИтоги;
+        protected NsgColumnDescriptor.Decimal КонОстатокКоличество_vmoИтоги;
+        protected NsgColumnDescriptor.Decimal ПриходКоличество_vmoДок;
+        protected NsgColumnDescriptor.Decimal РасходКоличество_vmoДок;
+        private NsgVisualMultipleObject vmoФильтр;
+        private NsgIGrid nsgIGrid1;
+        private NsgVisualMultipleObject vmoИтоги;
+        private NsgVisualMultipleObject vmoДок;
+        protected NsgColumnDescriptor.String ПериодСтрока;
+        private NsgSoft.ReportBuilder.NsgReportDataSource nsgReportDataSource1;
+        private NsgSoft.ReportBuilder.NsgReportDataSource ДокDataSource;
+        protected NsgColumnDescriptor.String Период_vmoЗаголовок;
+        protected NsgColumnDescriptor.String Фильтр_vmoЗаголовок;
+        protected NsgSoft.ReportBuilder.NsgReportDataSource ЗаголовокDataSource;
         private NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource1;
         private NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource2;
-        private NsgSoft.ReportBuilder.NsgReport nsgReport1;
-        protected NsgVisualMultipleObject vmoФильтр;
-        protected Номенклатура.ColumnDescriptor Номенклатура_vmoФильтр;
-        protected NsgIGrid nsgIGrid1;
-        protected NsgSoft.ReportBuilder.NsgReportDataSource nsgReportDataSource1;
-        protected NsgVisualMultipleObject vmoИтоги;
-        protected NsgVisualMultipleObject vmoДок;
+        private NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource3;
+        private NsgVisualMultipleObject vmoЗаголовок;
     }
 }

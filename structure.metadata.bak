@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<NsgConfiguration version="2021.5.7.4" CodeLang="ru" name="NSGAuto" description="New Configuration" copyright="Unknown Developer ©  2011" dbmanlist="" guid="0cc6bb00-1def-4857-9b9a-4f044d0ac14c" CodePath=".\code" CodeWebPath=".\codeWeb" UseWebCode="False" Prefix="NSGA" Type="Base" languages="" dll="">
+<NsgConfiguration version="2021.5.7.5" CodeLang="ru" name="NSGAuto" description="New Configuration" copyright="Unknown Developer ©  2011" dbmanlist="" guid="0cc6bb00-1def-4857-9b9a-4f044d0ac14c" CodePath=".\code" CodeWebPath=".\codeWeb" UseWebCode="False" Prefix="NSGA" Type="Base" languages="" dll="">
   <MetaDataList>
-    <NsgMetaData Guid="e255bf48-4b44-4ee9-a6f1-bf88ebed8105" version="2021.5.7.4" FullVersion="NsgSoft.DataObjects=2014.12.9.0;NSGAuto=2021.5.7.4;" name="Метаданные" typename="Метаданные" userinfo="True" userlog="True" usermenu="True" PeriodicTable="_SystemTables.PeriodicTable" languages="">
+    <NsgMetaData Guid="e255bf48-4b44-4ee9-a6f1-bf88ebed8105" version="2021.5.7.5" FullVersion="NsgSoft.DataObjects=2014.12.9.0;NSGAuto=2021.5.7.5;" name="Метаданные" typename="Метаданные" userinfo="True" userlog="True" usermenu="True" PeriodicTable="_SystemTables.PeriodicTable" languages="">
       <Groups>
         <group name="Сервис" />
         <group name="Автосервис" />
@@ -3644,6 +3644,11 @@
                 <presentation lang="(Default)" value="" />
               </NsgLanguageString>
             </NsgSimpleObject>
+            <NsgSimpleObject Guid="36a4fef0-e773-447e-9c51-9dec0c993bc7" type="NsgDataFloat" editoraccess="Full" name="Цена" visible="true" description="Цена" field="Cena" index="None" subtype="Resource" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
           </ObjectList>
           <Containers />
         </NsgMultipleObject>
@@ -3681,6 +3686,11 @@
               </NsgLanguageString>
             </NsgSimpleObject>
             <NsgSimpleObject Guid="a4c6c043-5620-4187-9b6b-c6ed053c9018" type="NsgDataFloat" editoraccess="Full" name="Рентабильность" visible="true" description="Рентабильность" field="Rentabilnost" index="None" subtype="Resource" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+            <NsgSimpleObject Guid="36a4fef0-e773-447e-9c51-9dec0c993bc7" type="NsgDataFloat" editoraccess="Full" name="Цена" visible="true" description="Цена" field="Cena" index="None" subtype="Resource" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
               <NsgLanguageString type="presentation">
                 <presentation lang="(Default)" value="" />
               </NsgLanguageString>
@@ -3727,6 +3737,11 @@
               </NsgLanguageString>
             </NsgSimpleObject>
             <NsgSimpleObject Guid="a4c6c043-5620-4187-9b6b-c6ed053c9018" type="NsgDataFloat" editoraccess="Full" name="Рентабильность" visible="true" description="Рентабильность" field="Rentabilnost" index="None" subtype="Resource" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+            <NsgSimpleObject Guid="36a4fef0-e773-447e-9c51-9dec0c993bc7" type="NsgDataFloat" editoraccess="Full" name="Цена" visible="true" description="Цена" field="Cena" index="None" subtype="Resource" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
               <NsgLanguageString type="presentation">
                 <presentation lang="(Default)" value="" />
               </NsgLanguageString>
@@ -3817,6 +3832,11 @@
               </NsgLanguageString>
             </NsgSimpleObject>
             <NsgSimpleObject Guid="8adc0c16-2eb1-441f-907b-8a54313aa448" type="NsgDataTypedReference" editoraccess="Full" name="Номенклатура" visible="true" description="Номенклатура" field="Nomenklatura" index="None" subtype="Property" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" refgroup="Автосервис" refname="Номенклатура">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+            <NsgSimpleObject Guid="36a4fef0-e773-447e-9c51-9dec0c993bc7" type="NsgDataFloat" editoraccess="Full" name="Цена" visible="true" description="Цена" field="Cena" index="None" subtype="Resource" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
               <NsgLanguageString type="presentation">
                 <presentation lang="(Default)" value="" />
               </NsgLanguageString>

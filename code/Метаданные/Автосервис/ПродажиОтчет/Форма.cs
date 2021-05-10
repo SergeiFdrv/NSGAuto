@@ -23,16 +23,22 @@ namespace NSGAuto.Метаданные.Автосервис
             InitializeComponent();
 		}
 
-		#region #Comments_Data# NsgSoft.Forms.NsgReportForm
-		
-		#endregion //#Comments_Data# NsgSoft.Forms.NsgReportForm
+        #region #Comments_Data# NsgSoft.Forms.NsgReportForm
 
-		#region #Comments_Constructors# NsgSoft.Forms.NsgReportForm
-		
-		#endregion //#Comments_Constructors# NsgSoft.Forms.NsgReportForm
+        #endregion //#Comments_Data# NsgSoft.Forms.NsgReportForm
 
-		#region #Comments_Methods# NsgSoft.Forms.NsgReportForm
-		
+        #region #Comments_Constructors# NsgSoft.Forms.NsgReportForm
+
+        #endregion //#Comments_Constructors# NsgSoft.Forms.NsgReportForm
+
+        #region #Comments_Methods# NsgSoft.Forms.NsgReportForm
+        protected override void OnSetFormObject(NsgMultipleObject formObject)
+        {
+            base.OnSetFormObject(formObject);
+            vmoФильтр.Data.MemoryTable.Clear();
+            vmoФильтр.Data.CurrentRow = vmoФильтр.Data.MemoryTable.NewRow();
+        }
+
         protected override void OnBeforeCreateReport(NsgBackgroundWorker nsgBackgroundReporter)
         {
             base.OnBeforeCreateReport(nsgBackgroundReporter);
@@ -63,27 +69,37 @@ namespace NSGAuto.Метаданные.Автосервис
             foreach (var tableRow in table.Rows)
             {
                 var mtRow = vmoИтоги.Data.MemoryTable.NewRow();
-                mtRow[Номенклатура_vmoИтоги].Value = tableRow[Продажи.Names.Номенклатура].ToReferent() as Номенклатура;
+
+                var ном = tableRow[Продажи.Names.Номенклатура].ToReferent() as Номенклатура;
+                var количество = tableRow[Продажи.Names.Количество].ToDecimal();
+
+                mtRow[Номенклатура_vmoИтоги].Value = ном;
                 mtRow[Контрагент_vmoИтоги].Value = tableRow[Продажи.Names.Контрагент].ToReferent() as Контрагент;
-                mtRow[Количество_vmoИтоги].Value = tableRow[Продажи.Names.Количество].ToDecimal();
+                mtRow[Количество_vmoИтоги].Value = количество;
+                mtRow[Себестоимость_vmoИтоги].Value = ном.Цена;
+                mtRow[Цена_vmoИтоги].Value = tableRow[Продажи.Names.Цена].ToDecimal();
                 cmp1.Add(Продажи.Names.Контрагент, tableRow[Продажи.Names.Контрагент].ToReferent() as Контрагент);
-                cmp1.Add(Продажи.Names.Номенклатура, tableRow[Продажи.Names.Номенклатура].ToReferent() as Номенклатура);
+                cmp1.Add(Продажи.Names.Номенклатура, ном);
                 cmp1.Add(Продажи.Names.ДатаДокумента, NsgPeriodPicker.Period.Begin, NsgSoft.Database.NsgComparison.GreaterOrEqual);
                 cmp1.Add(Продажи.Names.ДатаДокумента, NsgPeriodPicker.Period.End, NsgSoft.Database.NsgComparison.Less);
                 var count = регистр.SelectCount(cmp1);
                 cmp1.Clear();
-                var avgСумма = tableRow[Продажи.Names.Сумма].ToDecimal();
+                var avgЦена = tableRow[Продажи.Names.Цена].ToDecimal();
                 var avgПрибыль = tableRow[Продажи.Names.Прибыль].ToDecimal();
                 var avgРент = tableRow[Продажи.Names.Рентабильность].ToDecimal();
                 if (count != 0)
                 {
-                    avgСумма /= count;
+                    avgЦена /= count;
                     avgПрибыль /= count;
                     avgРент /= count;
                 }
-                mtRow[Сумма_vmoИтоги].Value = avgСумма;
-                mtRow[Прибыль_vmoИтоги].Value = avgПрибыль;
-                mtRow[Рентабильность_vmoИтоги].Value = avgРент;
+
+                mtRow[Цена_vmoИтоги].Value = avgЦена;
+                //var сумма = avgЦена * (decimal)mtRow[Количество_vmoИтоги].Value;
+                mtRow[Сумма_vmoИтоги].Value = tableRow[Продажи.Names.Сумма].ToDecimal();//сумма;
+                //var прибыль = сумма - ном.Цена * количество;
+                mtRow[Прибыль_vmoИтоги].Value = avgПрибыль;//прибыль / count;//avgПрибыль;
+                mtRow[Рентабильность_vmoИтоги].Value = avgРент;//прибыль / (ном.Цена * количество);//avgРент;
                 mtRow.Post();
             }
             vmoИтоги.Data.UpdateDataAsync(this); // разблокирует отображение изменений
@@ -101,25 +117,30 @@ namespace NSGAuto.Метаданные.Автосервис
             foreach (var tableRow in table.Rows)
             {
                 var mtRow = vmoДок.Data.MemoryTable.NewRow();
-                mtRow[Номенклатура_vmoДок].Value = tableRow[Продажи.Names.Номенклатура].ToReferent() as Номенклатура;
+
+                var ном = tableRow[Продажи.Names.Номенклатура].ToReferent() as Номенклатура;
+
+                mtRow[Номенклатура_vmoДок].Value = ном;
                 mtRow[Контрагент_vmoДок].Value = tableRow[Продажи.Names.Контрагент].ToReferent() as Контрагент;
                 mtRow[Количество_vmoДок].Value = tableRow[Продажи.Names.Количество].ToDecimal();
+                mtRow[Себестоимость_vmoДок].Value = ном.Цена;
                 cmp1.Add(Продажи.Names.Контрагент, tableRow[Продажи.Names.Контрагент].ToReferent() as Контрагент);
                 cmp1.Add(Продажи.Names.Номенклатура, tableRow[Продажи.Names.Номенклатура].ToReferent() as Номенклатура);
                 cmp1.Add(Продажи.Names.ДатаДокумента, NsgPeriodPicker.Period.Begin, NsgSoft.Database.NsgComparison.GreaterOrEqual);
                 cmp1.Add(Продажи.Names.ДатаДокумента, NsgPeriodPicker.Period.End, NsgSoft.Database.NsgComparison.Less);
                 var count = регистр.SelectCount(cmp1);
                 cmp1.Clear();
-                var avgСумма = tableRow[Продажи.Names.Сумма].ToDecimal();
+                var avgЦена = tableRow[Продажи.Names.Цена].ToDecimal();
                 var avgПрибыль = tableRow[Продажи.Names.Прибыль].ToDecimal();
                 var avgРент = tableRow[Продажи.Names.Рентабильность].ToDecimal();
                 if (count != 0)
                 {
-                    avgСумма /= count;
+                    avgЦена /= count;
                     avgПрибыль /= count;
                     avgРент /= count;
                 }
-                mtRow[Сумма_vmoДок].Value = avgСумма;
+                mtRow[Цена_vmoДок].Value = avgЦена;
+                mtRow[Сумма_vmoДок].Value = tableRow[Продажи.Names.Сумма].ToDecimal();
                 mtRow[Прибыль_vmoДок].Value = avgПрибыль;
                 mtRow[Рентабельность_vmoДок].Value = avgРент;
                 mtRow.Post();
