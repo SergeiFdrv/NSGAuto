@@ -76,7 +76,6 @@ namespace NSGAuto.Метаданные.Автосервис
             this.nsgLabel2 = new NsgSoft.Forms.NsgLabel();
             this.nsgButton1 = new NsgSoft.Design.NsgButton();
             this.Период = new NsgSoft.Forms.NsgColumnDescriptor();
-            this.ПериодСтрока = new NsgSoft.Forms.NsgColumnDescriptor.String();
             ((System.ComponentModel.ISupportInitialize)(this.btnCreateReport)).BeginInit();
             this.panelButtonReportForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.printButton)).BeginInit();
@@ -158,7 +157,6 @@ namespace NSGAuto.Метаданные.Автосервис
             // nsgVisualMultipleObject
             // 
             this.nsgVisualMultipleObject.Columns.Collection.Add(this.Период);
-            this.nsgVisualMultipleObject.Columns.Collection.Add(this.ПериодСтрока);
             this.nsgVisualMultipleObject.IsActive = true;
             this.nsgVisualMultipleObject.DataSourceType = NsgSoft.Forms.NsgDataSourceType.DynamicObject;
             this.nsgVisualMultipleObject.MetaDataName = "";
@@ -498,7 +496,7 @@ namespace NSGAuto.Метаданные.Автосервис
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource1);
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource2);
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource3);
-            this.nsgReport1.ReportGuid = "e5e4f90c7a2d48dca434cc246f25071e";
+            this.nsgReport1.ReportGuid = "702ff4fb3acd49cfa58262d278bb4513";
             this.nsgReport1.ReportLoaded = true;
             this.nsgReport1.ReportName = "Отчет";
             this.nsgReport1.ReportSource = resources.GetString("nsgReport1.ReportSource");
@@ -692,16 +690,6 @@ namespace NSGAuto.Метаданные.Автосервис
             this.Период.SearchCondition.OwnerComponent = this.Период;
             this.Период.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             // 
-            // ПериодСтрока
-            // 
-            this.ПериодСтрока.Caption = "ПериодСтрока";
-            this.ПериодСтрока.Creator = typeof(NsgSoft.Forms.NsgReportForm);
-            this.ПериодСтрока.Name = "ПериодСтрока";
-            this.ПериодСтрока.NSGType = typeof(NsgSoft.DataObjects.NsgDataString);
-            this.ПериодСтрока.PropertyType = typeof(string);
-            this.ПериодСтрока.SearchCondition.OwnerComponent = this.ПериодСтрока;
-            this.ПериодСтрока.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
-            // 
             // ОстаткиОтчетФорма
             // 
             this.AllowDrop = true;
@@ -758,42 +746,41 @@ namespace NSGAuto.Метаданные.Автосервис
         }
 
         #endregion
-        protected Номенклатура.ColumnDescriptor Номенклатура_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal НачОстаток_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal Приход_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal Расход_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal КонОстаток_vmoИтоги;
-        protected NsgSoft.ReportBuilder.NsgGroupsList nsgGroupsList1;
-        protected NsgPeriodPicker nsgPeriodPicker1;
-        protected NsgLabel nsgLabel2;
-        protected NsgColumnDescriptor Период;
-        protected NsgSoft.Design.NsgButton nsgButton1;
-        protected Номенклатура.ColumnDescriptor Номенклатура_vmoДок;
-        protected NsgColumnDescriptor.Decimal Приход_vmoДок;
-        protected NsgColumnDescriptor.Decimal Расход_vmoДок;
-        protected NsgColumnDescriptor.UntypedMultipleObject Документ_vmoДок;
         private NsgSoft.ReportBuilder.NsgReport nsgReport1;
-        protected Номенклатура.ColumnDescriptor Номенклатура_vmoФильтр;
         private NsgSoft.Forms.NsgIGridView.NsgObjectFilter nsgObjectFilter1;
-        protected NsgColumnDescriptor.Decimal НачОстатокКоличество_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal ПриходКоличество_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal РасходКоличество_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal КонОстатокКоличество_vmoИтоги;
-        protected NsgColumnDescriptor.Decimal ПриходКоличество_vmoДок;
-        protected NsgColumnDescriptor.Decimal РасходКоличество_vmoДок;
         private NsgVisualMultipleObject vmoФильтр;
         private NsgIGrid nsgIGrid1;
         private NsgVisualMultipleObject vmoИтоги;
         private NsgVisualMultipleObject vmoДок;
-        protected NsgColumnDescriptor.String ПериодСтрока;
         private NsgSoft.ReportBuilder.NsgReportDataSource nsgReportDataSource1;
         private NsgSoft.ReportBuilder.NsgReportDataSource ДокDataSource;
-        protected NsgColumnDescriptor.String Период_vmoЗаголовок;
-        protected NsgColumnDescriptor.String Фильтр_vmoЗаголовок;
-        protected NsgSoft.ReportBuilder.NsgReportDataSource ЗаголовокDataSource;
         private NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource1;
         private NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource2;
         private NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource3;
         private NsgVisualMultipleObject vmoЗаголовок;
+        private Номенклатура.ColumnDescriptor Номенклатура_vmoИтоги;
+        private NsgColumnDescriptor.Decimal НачОстаток_vmoИтоги;
+        private NsgColumnDescriptor.Decimal Приход_vmoИтоги;
+        private NsgColumnDescriptor.Decimal Расход_vmoИтоги;
+        private NsgColumnDescriptor.Decimal КонОстаток_vmoИтоги;
+        private NsgSoft.ReportBuilder.NsgGroupsList nsgGroupsList1;
+        private NsgPeriodPicker nsgPeriodPicker1;
+        private NsgLabel nsgLabel2;
+        private NsgColumnDescriptor Период;
+        private NsgSoft.Design.NsgButton nsgButton1;
+        private Номенклатура.ColumnDescriptor Номенклатура_vmoДок;
+        private NsgColumnDescriptor.Decimal Приход_vmoДок;
+        private NsgColumnDescriptor.Decimal Расход_vmoДок;
+        private NsgColumnDescriptor.UntypedMultipleObject Документ_vmoДок;
+        private Номенклатура.ColumnDescriptor Номенклатура_vmoФильтр;
+        private NsgColumnDescriptor.Decimal НачОстатокКоличество_vmoИтоги;
+        private NsgColumnDescriptor.Decimal ПриходКоличество_vmoИтоги;
+        private NsgColumnDescriptor.Decimal РасходКоличество_vmoИтоги;
+        private NsgColumnDescriptor.Decimal КонОстатокКоличество_vmoИтоги;
+        private NsgColumnDescriptor.Decimal ПриходКоличество_vmoДок;
+        private NsgColumnDescriptor.Decimal РасходКоличество_vmoДок;
+        private NsgColumnDescriptor.String Период_vmoЗаголовок;
+        private NsgColumnDescriptor.String Фильтр_vmoЗаголовок;
+        private NsgSoft.ReportBuilder.NsgReportDataSource ЗаголовокDataSource;
     }
 }

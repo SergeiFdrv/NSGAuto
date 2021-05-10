@@ -235,6 +235,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn1.DateFormat = null;
+            nsgIGridColumn1.ImportedFromVMO = false;
             nsgIGridColumn1.Name = "Контрагент";
             nsgIGridColumn1.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn1.Root = this.NsgIGrid.Columns.Collection;
@@ -250,6 +251,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn2.DateFormat = null;
+            nsgIGridColumn2.ImportedFromVMO = false;
             nsgIGridColumn2.Name = "Номенклатура";
             nsgIGridColumn2.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn2.Root = this.NsgIGrid.Columns.Collection;
@@ -265,6 +267,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn3.DateFormat = null;
+            nsgIGridColumn3.ImportedFromVMO = false;
             nsgIGridColumn3.Name = "Себестоимость";
             nsgIGridColumn3.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn3.Root = this.NsgIGrid.Columns.Collection;
@@ -280,6 +283,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn4.DateFormat = null;
+            nsgIGridColumn4.ImportedFromVMO = false;
             nsgIGridColumn4.Name = "Цена";
             nsgIGridColumn4.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn4.Root = this.NsgIGrid.Columns.Collection;
@@ -295,6 +299,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn5.DateFormat = null;
+            nsgIGridColumn5.ImportedFromVMO = false;
             nsgIGridColumn5.Name = "Количество";
             nsgIGridColumn5.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn5.Root = this.NsgIGrid.Columns.Collection;
@@ -310,6 +315,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn6.DateFormat = null;
+            nsgIGridColumn6.ImportedFromVMO = false;
             nsgIGridColumn6.Name = "Сумма";
             nsgIGridColumn6.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn6.Root = this.NsgIGrid.Columns.Collection;
@@ -325,6 +331,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn7.DateFormat = null;
+            nsgIGridColumn7.ImportedFromVMO = false;
             nsgIGridColumn7.Name = "Прибыль";
             nsgIGridColumn7.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn7.Root = this.NsgIGrid.Columns.Collection;
@@ -340,6 +347,7 @@ namespace NSGAuto.Метаданные.Автосервис
         "Visible",
         "Index"};
             nsgIGridColumn8.DateFormat = null;
+            nsgIGridColumn8.ImportedFromVMO = false;
             nsgIGridColumn8.Name = "Рентабильность";
             nsgIGridColumn8.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn8.Root = this.NsgIGrid.Columns.Collection;
@@ -444,7 +452,7 @@ namespace NSGAuto.Метаданные.Автосервис
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource1);
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource2);
             this.nsgReport1.ReportDataSources.Add(this.stiReportDataSource3);
-            this.nsgReport1.ReportGuid = "08c2e11ae5d7401a913e00a007f97154";
+            this.nsgReport1.ReportGuid = "54fbf43e20d34dbba6dc570ac6bea24d";
             this.nsgReport1.ReportLoaded = true;
             this.nsgReport1.ReportName = "Отчет";
             this.nsgReport1.ReportSource = resources.GetString("nsgReport1.ReportSource");
@@ -491,6 +499,7 @@ namespace NSGAuto.Метаданные.Автосервис
             // 
             this.ЗаголовокDataSource.MasterComponent = this.vmoЗаголовок;
             this.ЗаголовокDataSource.Name = "ЗаголовокDataSource";
+            this.ЗаголовокDataSource.Records = NsgSoft.Forms.NsgSourceRows.CurentRow;
             // 
             // vmoЗаголовок
             // 
@@ -843,13 +852,14 @@ namespace NSGAuto.Метаданные.Автосервис
         protected NsgColumnDescriptor.Decimal Рентабельность_vmoДок;
         protected Контрагент.ColumnDescriptor Контрагент_vmoДок;
         protected Номенклатура.ColumnDescriptor Номенклатура_vmoИтоги;
-        protected NsgSoft.ReportBuilder.NsgReportDataSource nsgReportDataSource1;
         protected NsgSoft.ReportBuilder.NsgReportDataSource ЗаголовокDataSource;
         protected NsgColumnDescriptor.String Период_vmoЗаголовок;
         protected NsgColumnDescriptor.String Фильтр_vmoЗаголовок;
         protected NsgColumnDescriptor.Decimal Сумма_vmoИтоги;
         protected NsgColumnDescriptor.Decimal Себестоимость_vmoИтоги;
         protected NsgColumnDescriptor.Decimal Сумма_vmoДок;
+        protected NsgColumnDescriptor.Decimal Себестоимость_vmoДок;
+        protected NsgSoft.ReportBuilder.NsgReportDataSource nsgReportDataSource1;
         protected NsgSoft.ReportBuilder.NsgReport nsgReport1;
         protected NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource1;
         protected NsgSoft.ReportBuilder.Design.StiReportDataSource stiReportDataSource2;
@@ -858,7 +868,6 @@ namespace NSGAuto.Метаданные.Автосервис
         protected NsgVisualMultipleObject vmoИтоги;
         protected NsgVisualMultipleObject vmoФильтр;
         protected NsgVisualMultipleObject vmoДок;
-        protected NsgColumnDescriptor.Decimal Себестоимость_vmoДок;
         protected NsgSoft.ReportBuilder.NsgReportDataSource ДокDataSource;
         protected NsgVisualMultipleObject vmoЗаголовок;
     }

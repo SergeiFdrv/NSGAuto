@@ -37,6 +37,8 @@ namespace NSGAuto.Метаданные.Автосервис
             base.OnSetFormObject(formObject);
             vmoФильтр.Data.MemoryTable.Clear();
             vmoФильтр.Data.CurrentRow = vmoФильтр.Data.MemoryTable.NewRow();
+            vmoЗаголовок.Data.MemoryTable.Clear();
+            vmoЗаголовок.Data.CurrentRow = vmoЗаголовок.Data.MemoryTable.NewRow();
         }
 
         protected override void OnBeforeCreateReport(NsgBackgroundWorker nsgBackgroundReporter)
@@ -95,11 +97,9 @@ namespace NSGAuto.Метаданные.Автосервис
                 }
 
                 mtRow[Цена_vmoИтоги].Value = avgЦена;
-                //var сумма = avgЦена * (decimal)mtRow[Количество_vmoИтоги].Value;
-                mtRow[Сумма_vmoИтоги].Value = tableRow[Продажи.Names.Сумма].ToDecimal();//сумма;
-                //var прибыль = сумма - ном.Цена * количество;
-                mtRow[Прибыль_vmoИтоги].Value = avgПрибыль;//прибыль / count;//avgПрибыль;
-                mtRow[Рентабильность_vmoИтоги].Value = avgРент;//прибыль / (ном.Цена * количество);//avgРент;
+                mtRow[Сумма_vmoИтоги].Value = tableRow[Продажи.Names.Сумма].ToDecimal();
+                mtRow[Прибыль_vmoИтоги].Value = avgПрибыль;
+                mtRow[Рентабильность_vmoИтоги].Value = avgРент;
                 mtRow.Post();
             }
             vmoИтоги.Data.UpdateDataAsync(this); // разблокирует отображение изменений
@@ -113,6 +113,8 @@ namespace NSGAuto.Метаданные.Автосервис
                 NsgSoft.Common.NsgRegisterResult.Credit | NsgSoft.Common.NsgRegisterResult.Debit,
                 Продажи.Names.Контрагент, Продажи.Names.Номенклатура);
             vmoДок.Data.MemoryTable.Clear();
+            Период_vmoЗаголовок.Value = NsgPeriodPicker.Period.Value.ToString();
+            Фильтр_vmoЗаголовок.Value = cmp.ToString();
             var cmp1 = new NsgCompare();
             foreach (var tableRow in table.Rows)
             {

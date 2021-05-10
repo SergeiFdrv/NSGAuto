@@ -38,6 +38,8 @@ namespace NSGAuto.Метаданные.Автосервис
             base.OnSetFormObject(formObject);
             vmoФильтр.Data.MemoryTable.Clear();
             vmoФильтр.Data.CurrentRow = vmoФильтр.Data.MemoryTable.NewRow();
+            vmoЗаголовок.Data.MemoryTable.Clear();
+            vmoЗаголовок.Data.CurrentRow = vmoЗаголовок.Data.MemoryTable.NewRow();
         }
 
         protected override void OnBeforeCreateReport(NsgBackgroundWorker nsgBackgroundReporter)
@@ -104,6 +106,8 @@ namespace NSGAuto.Метаданные.Автосервис
                 NsgSoft.Common.NsgRegisterResult.Credit | NsgSoft.Common.NsgRegisterResult.Debit,
                 Взаиморасчеты.Names.Контрагент, Взаиморасчеты.Names.Владелец);
             vmoДок.Data.MemoryTable.Clear();
+            Период_vmoЗаголовок.Value = nsgPeriodPicker1.Period.ToString();
+            Фильтр_vmoЗаголовок.Value = cmp.ToString();
             foreach (var tableRow in table.Rows)
             {
                 var mtRow = vmoДок.Data.MemoryTable.NewRow();
