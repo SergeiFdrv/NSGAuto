@@ -34,10 +34,12 @@ namespace NSGAuto.Метаданные.Автосервис
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ПриходнаяНакладнаяФормаЭлемента));
+            NsgSoft.Forms.Controls.PrintButtonPrintForm printButtonPrintForm1 = new NsgSoft.Forms.Controls.PrintButtonPrintForm();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn1 = new NsgSoft.Forms.NsgIGridColumn();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn2 = new NsgSoft.Forms.NsgIGridColumn();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn3 = new NsgSoft.Forms.NsgIGridColumn();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn4 = new NsgSoft.Forms.NsgIGridColumn();
+            NsgSoft.Forms.NsgIGridColumn nsgIGridColumn5 = new NsgSoft.Forms.NsgIGridColumn();
             NsgSoft.Forms.NsgMasterDetailBinding nsgMasterDetailBinding1 = new NsgSoft.Forms.NsgMasterDetailBinding();
             NsgSoft.DataObjects.NsgObjectDescriptor nsgObjectDescriptor1 = new NsgSoft.DataObjects.NsgObjectDescriptor();
             NsgSoft.DataObjects.NsgObjectDescriptor nsgObjectDescriptor2 = new NsgSoft.DataObjects.NsgObjectDescriptor();
@@ -50,6 +52,7 @@ namespace NSGAuto.Метаданные.Автосервис
             this.Номенклатура = new NSGAuto.Метаданные.Автосервис.Номенклатура.ColumnDescriptor();
             this.Количество = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
             this.Сумма = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
+            this.Цена = new NsgSoft.Forms.NsgColumnDescriptor.Decimal();
             this.nsgInput1 = new NsgSoft.Forms.NsgInput();
             this.nsgLabel1 = new NsgSoft.Forms.NsgLabel();
             this.nsgLabel2 = new NsgSoft.Forms.NsgLabel();
@@ -255,6 +258,10 @@ namespace NSGAuto.Метаданные.Автосервис
             this.printButton.ImageKey = "Print";
             this.printButton.Location = new System.Drawing.Point(1, 1);
             this.printButton.Name = "printButton";
+            printButtonPrintForm1.Name = "Печать";
+            printButtonPrintForm1.Report = "Автосервис.ПриходнаяНакладнаяПечать";
+            printButtonPrintForm1.Root = this.printButton.Reports.Collection;
+            this.printButton.Reports.Collection.Add(printButtonPrintForm1);
             this.printButton.ShowImage = false;
             this.printButton.ShowText = false;
             this.printButton.Size = new System.Drawing.Size(20, 26);
@@ -388,6 +395,7 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn1.ChangedProperties = new string[] {
         "Visible"};
             nsgIGridColumn1.DateFormat = null;
+            nsgIGridColumn1.ImportedFromVMO = false;
             nsgIGridColumn1.InitiateRowEdit = true;
             nsgIGridColumn1.Name = "Владелец";
             nsgIGridColumn1.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
@@ -404,6 +412,7 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn2.ChangedProperties = new string[] {
         "Visible"};
             nsgIGridColumn2.DateFormat = null;
+            nsgIGridColumn2.ImportedFromVMO = false;
             nsgIGridColumn2.InitiateRowEdit = true;
             nsgIGridColumn2.Name = "Номенклатура";
             nsgIGridColumn2.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
@@ -419,6 +428,7 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn3.ChangedProperties = new string[] {
         "Visible"};
             nsgIGridColumn3.DateFormat = null;
+            nsgIGridColumn3.ImportedFromVMO = false;
             nsgIGridColumn3.InitiateRowEdit = true;
             nsgIGridColumn3.Name = "Количество";
             nsgIGridColumn3.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
@@ -432,19 +442,38 @@ namespace NSGAuto.Метаданные.Автосервис
             nsgIGridColumn4.AutoResize = true;
             nsgIGridColumn4.Caption = "";
             nsgIGridColumn4.ChangedProperties = new string[] {
-        "Visible"};
+        "Visible",
+        "Index"};
             nsgIGridColumn4.DateFormat = null;
-            nsgIGridColumn4.InitiateRowEdit = true;
-            nsgIGridColumn4.Name = "Сумма";
+            nsgIGridColumn4.ImportedFromVMO = false;
+            nsgIGridColumn4.Name = "Цена";
             nsgIGridColumn4.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
             nsgIGridColumn4.Root = this.nsgIGrid1.Columns.Collection;
             nsgIGridColumn4.SortDirection = NsgSoft.Database.NsgSortDirection.None;
             nsgIGridColumn4.UseAsHeaderImage = false;
             nsgIGridColumn4.Width = 100;
+            nsgIGridColumn5.AllowFilter = true;
+            nsgIGridColumn5.AllowGroupSelect = false;
+            nsgIGridColumn5.AllowResize = true;
+            nsgIGridColumn5.AutoResize = true;
+            nsgIGridColumn5.Caption = "";
+            nsgIGridColumn5.ChangedProperties = new string[] {
+        "Visible",
+        "Index"};
+            nsgIGridColumn5.DateFormat = null;
+            nsgIGridColumn5.ImportedFromVMO = false;
+            nsgIGridColumn5.InitiateRowEdit = true;
+            nsgIGridColumn5.Name = "Сумма";
+            nsgIGridColumn5.Position = ((NsgSoft.Forms.NsgIGrid.ColumnPosition)(NsgSoft.Forms.NsgIGrid.ColumnPosition.NextColumn));
+            nsgIGridColumn5.Root = this.nsgIGrid1.Columns.Collection;
+            nsgIGridColumn5.SortDirection = NsgSoft.Database.NsgSortDirection.None;
+            nsgIGridColumn5.UseAsHeaderImage = false;
+            nsgIGridColumn5.Width = 100;
             this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn1);
             this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn2);
             this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn3);
             this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn4);
+            this.nsgIGrid1.Columns.Collection.Add(nsgIGridColumn5);
             this.nsgIGrid1.Filter = false;
             this.nsgIGrid1.FrozenColumns = 0;
             this.nsgIGrid1.Grouping = true;
@@ -498,6 +527,7 @@ namespace NSGAuto.Метаданные.Автосервис
             this.vmoТаблица.Columns.Collection.Add(this.Номенклатура);
             this.vmoТаблица.Columns.Collection.Add(this.Количество);
             this.vmoТаблица.Columns.Collection.Add(this.Сумма);
+            this.vmoТаблица.Columns.Collection.Add(this.Цена);
             this.vmoТаблица.MasterComponent = this.nsgVisualMultipleObject;
             this.vmoТаблица.Binding = nsgMasterDetailBinding1;
             // 
@@ -584,6 +614,17 @@ namespace NSGAuto.Метаданные.Автосервис
             this.Сумма.PropertyType = typeof(decimal);
             this.Сумма.SearchCondition.OwnerComponent = this.Сумма;
             this.Сумма.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
+            // 
+            // Цена
+            // 
+            this.Цена.CalcTotal = false;
+            this.Цена.Caption = "Цена";
+            this.Цена.Creator = typeof(NsgSoft.Forms.NsgMultipleObjectElementForm);
+            this.Цена.Name = "Цена";
+            this.Цена.NSGType = typeof(NsgSoft.DataObjects.NsgDataFloat);
+            this.Цена.PropertyType = typeof(decimal);
+            this.Цена.SearchCondition.OwnerComponent = this.Цена;
+            this.Цена.SearchCondition.Parameters = new NsgSoft.DataObjects.NsgCompareParam[0];
             // 
             // nsgInput1
             // 
@@ -1001,5 +1042,6 @@ namespace NSGAuto.Метаданные.Автосервис
         protected NsgColumnDescriptor.Int64 НомерСтроки;
         protected Номенклатура.ColumnDescriptor Номенклатура;
         protected NsgColumnDescriptor.Decimal Количество;
+        protected NsgColumnDescriptor.Decimal Цена;
     }
 }

@@ -41,9 +41,18 @@ namespace NSGAuto.Метаданные.Автосервис
 
         private void nsgIGrid1_CellEndEdit(object sender, NsgIGrid.NsgIGridCellEventArgs e)
         {
-            Сумма.Value = Номенклатура.Value.Цена * Количество.Value;
+            if (e.ColumnName == Номенклатура.Name)
+            {
+                Цена.Value = Номенклатура.Value.Цена;
+                Сумма.Value = Номенклатура.Value.Цена * Количество.Value;
+            }
+            if (e.ColumnName == Цена.Name)
+            {
+                Сумма.Value = Цена.Value * Количество.Value;
+            }
             if (e.ColumnName == Количество.Name)
             {
+                Сумма.Value = Цена.Value * Количество.Value;
                 if (Количество.Value > 100)
                 {
                     e.RowObject.AddUserProperty(NsgIGrid.BACKCOLOR, Color.Red);
@@ -55,6 +64,20 @@ namespace NSGAuto.Метаданные.Автосервис
                     e.CellObject.DeleteUserProperty(NsgIGrid.BLINK);
                 }
             }
+            //Сумма.Value = Номенклатура.Value.Цена * Количество.Value;
+            //if (e.ColumnName == Количество.Name)
+            //{
+            //    if (Количество.Value > 100)
+            //    {
+            //        e.RowObject.AddUserProperty(NsgIGrid.BACKCOLOR, Color.Red);
+            //        e.CellObject.AddUserProperty(NsgIGrid.BLINK, true);
+            //    }
+            //    else
+            //    {
+            //        e.RowObject.DeleteUserProperty(NsgIGrid.BACKCOLOR);
+            //        e.CellObject.DeleteUserProperty(NsgIGrid.BLINK);
+            //    }
+            //}
         }
 
         private void nsgIGrid1_CellRequestEdit(object sender, NsgIGrid.NsgIGridCellEventArgs e)

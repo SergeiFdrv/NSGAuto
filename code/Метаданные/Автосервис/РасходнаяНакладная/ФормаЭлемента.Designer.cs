@@ -34,6 +34,7 @@ namespace NSGAuto.Метаданные.Автосервис
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(РасходнаяНакладнаяФормаЭлемента));
+            NsgSoft.Forms.Controls.PrintButtonPrintForm printButtonPrintForm1 = new NsgSoft.Forms.Controls.PrintButtonPrintForm();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn1 = new NsgSoft.Forms.NsgIGridColumn();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn2 = new NsgSoft.Forms.NsgIGridColumn();
             NsgSoft.Forms.NsgIGridColumn nsgIGridColumn3 = new NsgSoft.Forms.NsgIGridColumn();
@@ -261,6 +262,10 @@ namespace NSGAuto.Метаданные.Автосервис
             this.printButton.ImageKey = "Print";
             this.printButton.Location = new System.Drawing.Point(1, 1);
             this.printButton.Name = "printButton";
+            printButtonPrintForm1.Name = "Печать";
+            printButtonPrintForm1.Report = "Автосервис.РасходнаяНакладнаяПечать";
+            printButtonPrintForm1.Root = this.printButton.Reports.Collection;
+            this.printButton.Reports.Collection.Add(printButtonPrintForm1);
             this.printButton.ShowImage = false;
             this.printButton.ShowText = false;
             this.printButton.Size = new System.Drawing.Size(20, 26);

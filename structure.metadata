@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<NsgConfiguration version="2021.5.10.0" CodeLang="ru" name="NSGAuto" description="New Configuration" copyright="Unknown Developer ©  2011" dbmanlist="" guid="0cc6bb00-1def-4857-9b9a-4f044d0ac14c" CodePath=".\code" CodeWebPath=".\codeWeb" UseWebCode="False" Prefix="NSGA" Type="Base" languages="" dll="">
+<NsgConfiguration version="2021.5.11.0" CodeLang="ru" name="NSGAuto" description="New Configuration" copyright="Unknown Developer ©  2011" dbmanlist="" guid="0cc6bb00-1def-4857-9b9a-4f044d0ac14c" CodePath=".\code" CodeWebPath=".\codeWeb" UseWebCode="False" Prefix="NSGA" Type="Base" languages="" dll="">
   <MetaDataList>
-    <NsgMetaData Guid="e255bf48-4b44-4ee9-a6f1-bf88ebed8105" version="2021.5.10.0" FullVersion="NsgSoft.DataObjects=2014.12.9.0;NSGAuto=2021.5.10.0;" name="Метаданные" typename="Метаданные" userinfo="True" userlog="True" usermenu="True" PeriodicTable="_SystemTables.PeriodicTable" languages="">
+    <NsgMetaData Guid="e255bf48-4b44-4ee9-a6f1-bf88ebed8105" version="2021.5.11.0" FullVersion="NsgSoft.DataObjects=2014.12.9.0;NSGAuto=2021.5.11.0;" name="Метаданные" typename="Метаданные" userinfo="True" userlog="True" usermenu="True" PeriodicTable="_SystemTables.PeriodicTable" languages="">
       <Groups>
         <group name="Сервис" />
         <group name="Автосервис" />
@@ -2775,11 +2775,17 @@
                 <presentation lang="(Default)" value="" />
               </NsgLanguageString>
             </NsgSimpleObject>
+            <NsgSimpleObject Guid="560e7a7c-0f6e-455c-9719-4ddaebc92a0a" type="NsgDataFloat" editoraccess="Full" name="Цена" visible="true" description="Цена" field="Cena" index="None" subtype="Common" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
           </ObjectList>
           <Containers>
             <container name="Номенклатура" />
             <container name="Количество" />
             <container name="Сумма" />
+            <container name="Цена" />
           </Containers>
         </NsgMultipleObject>
         <NsgMultipleObject Guid="3451f937-40fb-404f-8214-dad88fe8adaf" type="NsgDataDictionary" editoraccess="Full" name="Контрагент" visible="true" description="Справочник" group="Автосервис" table="NSGA_dic_Kontragent" searchfield="Наименование" useFullTextIndex="true" visibleadminonly="false" entitytype="Object" hashistory="False" maxgrouplevel="100" hasOwner="false">
@@ -3837,6 +3843,56 @@
               </NsgLanguageString>
             </NsgSimpleObject>
             <NsgSimpleObject Guid="36a4fef0-e773-447e-9c51-9dec0c993bc7" type="NsgDataFloat" editoraccess="Full" name="Цена" visible="true" description="Цена" field="Cena" index="None" subtype="Resource" nullAllow="False" SaveInDatabase="true" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="-1000000000000000" maxValue="1000000000000000" precision="2" hidezero="True">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+          </ObjectList>
+        </NsgMultipleObject>
+        <NsgMultipleObject Guid="caf5cea3-ce70-422a-b6c8-87d9b52fd7a9" type="NsgReportObject" editoraccess="Full" name="ПриходнаяНакладнаяПечать" visible="true" description="Отчет" group="Автосервис" table="NSGA_report_PrikhodnajaN" useFullTextIndex="true" visibleadminonly="false">
+          <NsgLanguageString type="presentation">
+            <presentation lang="(Default)" value="" />
+          </NsgLanguageString>
+          <NsgLanguageString type="valuemask">
+            <presentation lang="(Default)" value="{Представление}" />
+          </NsgLanguageString>
+          <ObjectList>
+            <NsgSimpleObject Guid="f77ebbb1-bd9d-4b72-afd7-0a2ecf169979" type="NsgDataGuid" editoraccess="ReadOnly" name="Идентификатор" visible="true" description="Идентификатор" field="_ID" index="UniqueControl" subtype="Common" nullAllow="False" SaveInDatabase="false" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+            <NsgSimpleObject Guid="8450cfec-2c08-4de6-b853-fc280f7c54a6" type="NsgDataInteger" editoraccess="Hidden" name="Автоинкремент" visible="true" description="Автоинкремент" field="_AutoInc" index="UniqueControl" subtype="Common" nullAllow="False" SaveInDatabase="false" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="0" maxValue="0">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+            <NsgSimpleObject Guid="605c1853-6210-461d-925e-b5b8e0aff83f" type="NsgDataForm" editoraccess="Full" name="Форма" visible="true" description="Форма" field="Forma" index="None" subtype="ElementForm" nullAllow="False" SaveInDatabase="false" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" class="NSGAuto.Метаданные.Автосервис.ПриходнаяНакладнаяПечатьФорма">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+          </ObjectList>
+        </NsgMultipleObject>
+        <NsgMultipleObject Guid="d470c607-5645-4ea9-a3ce-277355b9d3d4" type="NsgReportObject" editoraccess="Full" name="РасходнаяНакладнаяПечать" visible="true" description="Отчет" group="Автосервис" table="NSGA_report_RaskhodnajaN" useFullTextIndex="true" visibleadminonly="false">
+          <NsgLanguageString type="presentation">
+            <presentation lang="(Default)" value="" />
+          </NsgLanguageString>
+          <NsgLanguageString type="valuemask">
+            <presentation lang="(Default)" value="{Представление}" />
+          </NsgLanguageString>
+          <ObjectList>
+            <NsgSimpleObject Guid="dc219173-9b32-4f33-b0d3-07d869dbdd4d" type="NsgDataGuid" editoraccess="ReadOnly" name="Идентификатор" visible="true" description="Идентификатор" field="_ID" index="UniqueControl" subtype="Common" nullAllow="False" SaveInDatabase="false" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+            <NsgSimpleObject Guid="2e9c6486-1657-4e46-8b4e-91793bfea278" type="NsgDataInteger" editoraccess="Hidden" name="Автоинкремент" visible="true" description="Автоинкремент" field="_AutoInc" index="UniqueControl" subtype="Common" nullAllow="False" SaveInDatabase="false" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" minValue="0" maxValue="0">
+              <NsgLanguageString type="presentation">
+                <presentation lang="(Default)" value="" />
+              </NsgLanguageString>
+            </NsgSimpleObject>
+            <NsgSimpleObject Guid="914020af-31f1-4ffd-80fe-03dc3bbb5e1e" type="NsgDataForm" editoraccess="Full" name="Форма" visible="true" description="Форма" field="Forma" index="None" subtype="ElementForm" nullAllow="False" SaveInDatabase="false" includeInPredefined="false" required="false" characteristicCompareType="Equal" characteristicWeight="1" stringFormat="" class="NSGAuto.Метаданные.Автосервис.РасходнаяНакладнаяПечатьФорма">
               <NsgLanguageString type="presentation">
                 <presentation lang="(Default)" value="" />
               </NsgLanguageString>

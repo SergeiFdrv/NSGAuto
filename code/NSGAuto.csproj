@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>2021.5.10.0</ProductVersion>
+    <ProductVersion>2021.5.11.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0cc6bb00-1def-4857-9b9a-4f044d0ac14c</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -922,5 +922,53 @@
       <NsgOwnerGuid>4d0af52d-7931-4952-9a22-c4ab6d585ddb</NsgOwnerGuid>
       <NsgOwnerName>Продажи</NsgOwnerName>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Метаданные\Автосервис\ПриходнаяНакладнаяПечать\ПриходнаяНакладнаяПечать.NsgInit.cs">
+      <NsgOwnerGuid>caf5cea3-ce70-422a-b6c8-87d9b52fd7a9</NsgOwnerGuid>
+      <NsgOwnerName>ПриходнаяНакладнаяПечать</NsgOwnerName>
+      <DependentUpon>ПриходнаяНакладнаяПечать.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Метаданные\Автосервис\ПриходнаяНакладнаяПечать\ПриходнаяНакладнаяПечать.cs">
+      <NsgOwnerGuid>caf5cea3-ce70-422a-b6c8-87d9b52fd7a9</NsgOwnerGuid>
+      <NsgOwnerName>ПриходнаяНакладнаяПечать</NsgOwnerName>
+    </Compile>
+    <Compile Include="Метаданные\Автосервис\ПриходнаяНакладнаяПечать\Форма.Designer.cs">
+      <NsgOwnerGuid>caf5cea3-ce70-422a-b6c8-87d9b52fd7a9</NsgOwnerGuid>
+      <DependentUpon>Форма.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Метаданные\Автосервис\ПриходнаяНакладнаяПечать\Форма.cs">
+      <NsgOwnerGuid>caf5cea3-ce70-422a-b6c8-87d9b52fd7a9</NsgOwnerGuid>
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Метаданные\Автосервис\ПриходнаяНакладнаяПечать\Форма.resx">
+      <NsgOwnerGuid>caf5cea3-ce70-422a-b6c8-87d9b52fd7a9</NsgOwnerGuid>
+      <DependentUpon>Форма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Метаданные\Автосервис\РасходнаяНакладнаяПечать\РасходнаяНакладнаяПечать.NsgInit.cs">
+      <NsgOwnerGuid>d470c607-5645-4ea9-a3ce-277355b9d3d4</NsgOwnerGuid>
+      <NsgOwnerName>РасходнаяНакладнаяПечать</NsgOwnerName>
+      <DependentUpon>РасходнаяНакладнаяПечать.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Метаданные\Автосервис\РасходнаяНакладнаяПечать\РасходнаяНакладнаяПечать.cs">
+      <NsgOwnerGuid>d470c607-5645-4ea9-a3ce-277355b9d3d4</NsgOwnerGuid>
+      <NsgOwnerName>РасходнаяНакладнаяПечать</NsgOwnerName>
+    </Compile>
+    <Compile Include="Метаданные\Автосервис\РасходнаяНакладнаяПечать\Форма.Designer.cs">
+      <NsgOwnerGuid>d470c607-5645-4ea9-a3ce-277355b9d3d4</NsgOwnerGuid>
+      <DependentUpon>Форма.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Метаданные\Автосервис\РасходнаяНакладнаяПечать\Форма.cs">
+      <NsgOwnerGuid>d470c607-5645-4ea9-a3ce-277355b9d3d4</NsgOwnerGuid>
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Метаданные\Автосервис\РасходнаяНакладнаяПечать\Форма.resx">
+      <NsgOwnerGuid>d470c607-5645-4ea9-a3ce-277355b9d3d4</NsgOwnerGuid>
+      <DependentUpon>Форма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
